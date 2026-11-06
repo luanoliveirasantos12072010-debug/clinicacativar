@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cativar Multidisciplinar · Terapias para o desenvolvimento em Paulo Afonso - BA</title>
+<meta name="description" content="Cativar Multidisciplinar, Paulo Afonso - BA. Autismo, TDAH e ansiedade. Terapia ABA e Denver, psicologia, fonoaudiologia, terapia ocupacional com integração sensorial, psicomotricidade, fisioterapia, nutrição, psicopedagogia, musicoterapia, odontologia, neurologia e psiquiatria.">
+<meta property="og:title" content="Cativar Multidisciplinar">
+<meta property="og:description" content="Referência em desenvolvimento e bem-estar. Vivências que levam a terapia para a vida real.">
+<meta property="og:image" content="img/resultado-criancas-colchao.jpg">
+<meta name="theme-color" content="#23493b">
+<link rel="icon" href="img/logo-sm.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalClinic","name":"Cativar Multidisciplinar","slogan":"Referência em desenvolvimento e bem-estar.","telephone":"+55 75 98705-8503","email":"cativarclinicamultidisciplinar@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Rua Alagoas, 5 - Panorama","addressLocality":"Paulo Afonso","addressRegion":"BA","postalCode":"48605-036","addressCountry":"BR"},"openingHours":"Mo-Fr 08:00-18:00","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"14"}}
+</script>
+<style>
+/* MODELO 2 · "Jardim que cresce": verde eucalipto + lima da logo + toque rosé. Bento, limpo, moderno. Sem preto (o texto é verde-floresta). */
+:root{
+  --bg:#f3f6f0; --white:#fdfefb; --mint:#e6efe2; --mint2:#d5e4d0;
+  --forest:#1f4436; --green:#2f6b52; --green2:#3f8466; --sage:#9fc0a3; --lime:#cae18a; --limeD:#a9c45c;
+  --rose:#d1848e; --roseL:#f7e2e3;
+  --ink:#1c3a2f; --mid:#5e7469; --line:rgba(28,58,47,.12);
+  --disp:"Sora",system-ui,sans-serif; --serif:"Instrument Serif",Georgia,serif; --body:"DM Sans",system-ui,sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1); --spring:cubic-bezier(.34,1.56,.64,1);
+  --r:28px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip;-webkit-text-size-adjust:100%}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65}
+a{color:inherit}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit}
+[hidden]{display:none!important}
+::selection{background:var(--lime)}
+.wrap{max-width:1280px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left));padding-right:max(20px,env(safe-area-inset-right))}
+h1,h2,h3,h4{font-family:var(--disp);font-weight:600;line-height:1.04;letter-spacing:-.035em;margin:0;text-wrap:balance;color:var(--forest)}
+h2{font-size:clamp(36px,5vw,68px)}
+h3{font-size:clamp(26px,2.6vw,36px)}
+h4{font-size:21px;letter-spacing:-.02em;line-height:1.2}
+.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em;color:var(--green2)}
+p{margin:0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--disp);font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green)}
+.eyebrow::before{content:"";width:10px;height:10px;border-radius:50% 0 50% 0;background:var(--limeD);transform:rotate(-12deg)}
+.pad{padding-block:clamp(84px,10vw,140px)}
+.muted{color:var(--mid)}
+
+/* ===== Entrada (sem porcentagem): a logo nasce e vai para o menu ===== */
+.intro{position:fixed;inset:0;z-index:400;display:grid;place-items:center;background:var(--forest);transition:clip-path 1s var(--ease) .15s;clip-path:circle(150% at 50% 50%)}
+.intro.go{clip-path:circle(0% at 50% 50%);pointer-events:none}
+.intro img{width:min(220px,50vw);border-radius:50%;animation:seed 1.1s var(--spring) both}
+.intro .sprout{position:absolute;width:min(380px,80vw);height:min(380px,80vw)}
+.intro .sprout circle{fill:none;stroke:var(--lime);stroke-width:1.5;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.1s var(--ease) .2s forwards}
+@keyframes seed{from{transform:scale(.2) rotate(-30deg);opacity:0}}
+@keyframes draw{to{stroke-dashoffset:0}}
+
+/* ===== Topo ===== */
+.nav{position:fixed;inset:12px 0 auto;z-index:60;pointer-events:none}
+.nav .bar{pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 8px 8px 10px;border-radius:999px;background:rgba(253,254,251,.78);backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);box-shadow:0 0 0 1px var(--line),0 18px 40px -26px rgba(28,58,47,.45);transition:box-shadow .4s}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{width:42px;height:42px;border-radius:50%}
+.brand b{font-family:var(--disp);font-weight:700;font-size:17px;letter-spacing:-.02em;color:var(--forest);line-height:1}
+.brand small{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mid);margin-top:3px}
+.menu{display:flex;gap:4px;position:relative}
+.menu a{position:relative;z-index:1;text-decoration:none;font-size:14.5px;font-weight:500;padding:9px 15px;border-radius:999px;transition:color .3s}
+.menu .pill{position:absolute;top:0;height:100%;border-radius:999px;background:var(--mint);transition:left .45s var(--ease),width .45s var(--ease),opacity .3s;opacity:0}
+@media(max-width:1060px){.menu{display:none}}
+
+.btn{--x:0px;--y:0px;position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 26px;border-radius:999px;font-family:var(--disp);font-weight:600;font-size:15px;letter-spacing:-.01em;text-decoration:none;border:0;cursor:pointer;transform:translate(var(--x),var(--y));transition:transform .4s var(--ease),background .3s,color .3s,box-shadow .3s;white-space:nowrap;overflow:hidden;isolation:isolate}
+.btn svg{width:19px;height:19px;flex:none}
+.btn.g{background:var(--forest);color:var(--lime)}
+.btn.g:hover{background:var(--green)}
+.btn.l{background:var(--lime);color:var(--forest)}
+.btn.l:hover{background:#d6ea9c;box-shadow:0 14px 30px -14px rgba(169,196,92,.9)}
+.btn.o{background:transparent;color:var(--forest);box-shadow:inset 0 0 0 1.5px var(--forest)}
+.btn.o:hover{background:var(--forest);color:var(--lime)}
+.btn .ar{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:currentColor;transition:transform .45s var(--ease)}
+.btn .ar svg{width:14px;height:14px}
+.btn.g .ar svg{color:var(--forest)}.btn.l .ar svg,.btn.o .ar svg{color:var(--lime)}
+.btn.o:hover .ar svg{color:var(--forest)}
+.btn:hover .ar{transform:rotate(-45deg)}
+.btn:focus-visible,a:focus-visible,button:focus-visible,input:focus-visible{outline:2.5px solid var(--limeD);outline-offset:3px}
+.nav .btn{padding:11px 18px}
+@media(max-width:560px){.nav .btn span{display:none}.nav .btn{padding:11px 13px}.brand small{display:none}}
+
+/* ===== HERO bento ===== */
+.hero{position:relative;padding-top:110px;padding-bottom:40px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;grid-template-rows:auto auto;gap:14px}
+.h-main{grid-row:1/3;position:relative;border-radius:var(--r);background:var(--forest);color:#fff;padding:clamp(28px,4.4vw,60px);display:flex;flex-direction:column;justify-content:space-between;gap:34px;overflow:hidden;min-height:clamp(520px,64vh,680px);isolation:isolate}
+.h-main h1{color:#fff;font-size:clamp(42px,5.8vw,86px);font-weight:600}
+.h-main h1 .it{color:var(--lime)}
+.rot{display:inline-grid;vertical-align:bottom;height:1.08em;overflow:hidden}
+.rot span{grid-area:1/1;font-family:var(--serif);font-style:italic;font-weight:400;color:var(--lime);transform:translateY(105%);opacity:0;transition:transform .7s var(--ease),opacity .5s}
+.rot span.on{transform:none;opacity:1}
+.rot span.out{transform:translateY(-105%);opacity:0}
+.h-main p{color:rgba(255,255,255,.78);max-width:46ch;font-size:clamp(16.5px,1.35vw,18.5px)}
+.h-main .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.h-main .vine{position:absolute;right:-40px;bottom:-30px;width:min(420px,70%);z-index:-1;opacity:.9}
+.vine path{fill:none;stroke:var(--green2);stroke-width:2.2;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+.vine .lf{fill:var(--green);stroke:none;transform-box:fill-box;transform-origin:0 100%;transform:scale(0);transition:transform .9s var(--spring)}
+.ready .vine path{animation:draw 2.6s var(--ease) .4s forwards}
+.ready .vine .lf{transform:scale(1)}
+.h-tags{display:flex;gap:8px;flex-wrap:wrap}
+.h-tags span{font-size:13.5px;padding:7px 13px;border-radius:999px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);color:rgba(255,255,255,.9)}
+.h-ph{position:relative;border-radius:var(--r);overflow:hidden;min-height:250px;background:var(--mint)}
+.h-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.08);transition:transform 1.6s var(--ease)}
+.ready .h-ph img{transform:scale(1)}
+.h-ph .cap{position:absolute;left:14px;bottom:14px;display:flex;align-items:center;gap:8px;padding:8px 14px 8px 8px;border-radius:999px;background:rgba(253,254,251,.92);backdrop-filter:blur(8px);font-size:13.5px;font-weight:500}
+.h-ph .cap i{width:26px;height:26px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-style:normal}
+.h-duo{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.h-card{border-radius:var(--r);padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:14px;min-height:200px}
+.h-card.lime{background:var(--lime)}
+.h-card.white{background:var(--white);box-shadow:inset 0 0 0 1px var(--line)}
+.h-card b{font-family:var(--disp);font-size:clamp(44px,4.4vw,64px);font-weight:600;letter-spacing:-.05em;line-height:1;color:var(--forest)}
+.h-card small{display:block;margin-top:6px;font-size:14px;color:var(--forest);opacity:.8;line-height:1.35}
+.h-card .stars{color:var(--forest);letter-spacing:3px}
+.h-card img.lg{width:64px;height:64px;border-radius:50%}
+.fade{opacity:0;transform:translateY(26px)}
+.ready .fade{animation:fin 1s var(--ease) forwards;animation-delay:var(--d,.2s)}
+@keyframes fin{to{opacity:1;transform:none}}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr}.h-main{grid-row:auto;min-height:auto}.h-ph{min-height:300px}}
+@media(max-width:440px){.h-duo{grid-template-columns:1fr 1fr}.h-card{padding:18px;min-height:170px}}
+
+/* faixa de valores */
+.values{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:40px}
+.values span{display:inline-flex;gap:8px;align-items:center;font-family:var(--disp);font-size:14px;font-weight:500;padding:10px 16px;border-radius:999px;background:var(--white);box-shadow:inset 0 0 0 1px var(--line)}
+.values span i{width:8px;height:8px;border-radius:50%;background:var(--limeD)}
+
+/* ===== Atendimentos: painel com abas e autoplay ===== */
+.sh{display:flex;justify-content:space-between;align-items:end;gap:28px;flex-wrap:wrap;margin-bottom:clamp(36px,5vw,56px)}
+.sh .l{display:flex;flex-direction:column;gap:16px;max-width:760px}
+.sh p{max-width:44ch;color:var(--mid)}
+.tabs{display:grid;grid-template-columns:330px 1fr;gap:16px;align-items:stretch}
+.tlist{display:flex;flex-direction:column;gap:6px}
+.tb{position:relative;display:flex;align-items:center;gap:14px;width:100%;text-align:left;border:0;cursor:pointer;padding:14px 16px;border-radius:18px;background:transparent;font-family:var(--disp);font-weight:500;font-size:16px;letter-spacing:-.01em;transition:background .35s,color .35s;overflow:hidden}
+.tb .ic{flex:none;width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:var(--mint);color:var(--green);transition:background .35s,color .35s}
+.tb .ic svg{width:22px;height:22px}
+.tb:hover{background:var(--mint)}
+.tb.on{background:var(--forest);color:#fff}
+.tb.on .ic{background:var(--lime);color:var(--forest)}
+.tb .bar{position:absolute;left:16px;right:16px;bottom:6px;height:2px;border-radius:2px;background:rgba(202,225,138,.25);overflow:hidden;opacity:0}
+.tb.on .bar{opacity:1}
+.tb .bar i{display:block;height:100%;width:100%;background:var(--lime);transform-origin:left;transform:scaleX(0)}
+.stage{position:relative;border-radius:var(--r);background:var(--white);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden;min-height:600px}
+.pane{position:absolute;inset:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);opacity:0;visibility:hidden;transition:opacity .6s var(--ease),visibility .6s}
+.pane.on{opacity:1;visibility:visible;position:relative}
+.pane .ph{position:relative;overflow:hidden;min-height:300px;background:var(--mint)}
+.pane .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 1.6s var(--ease)}
+.pane.on .ph img{transform:scale(1)}
+.pane .ph .il{position:absolute;left:14px;top:14px;font-size:12px;font-weight:600;letter-spacing:.06em;padding:6px 11px;border-radius:999px;background:rgba(253,254,251,.92)}
+.pane .bd{min-width:0;padding:clamp(24px,3.4vw,44px);display:flex;flex-direction:column;gap:16px;justify-content:center}
+.pane .bd>*{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.pane.on .bd>*{opacity:1;transform:none}
+.pane.on .bd>*:nth-child(2){transition-delay:.06s}.pane.on .bd>*:nth-child(3){transition-delay:.12s}.pane.on .bd>*:nth-child(4){transition-delay:.18s}.pane.on .bd>*:nth-child(5){transition-delay:.24s}.pane.on .bd>*:nth-child(6){transition-delay:.3s}
+.pane .bd p{color:var(--mid)}
+.chips{display:flex;gap:7px;flex-wrap:wrap}
+.chips span{font-size:13.5px;font-weight:500;padding:6px 12px;border-radius:999px;background:var(--mint);color:var(--forest)}
+.chips span.k{background:var(--lime)}
+.lnk{display:inline-flex;align-items:center;gap:8px;font-family:var(--disp);font-weight:600;font-size:15px;color:var(--green);text-decoration:none}
+.lnk svg{width:18px;height:18px;transition:transform .4s var(--ease)}
+.lnk:hover svg{transform:translateX(4px)}
+/* psicologia: subabas */
+.seg{display:flex;gap:6px;padding:5px;border-radius:999px;background:var(--mint);width:max-content;max-width:100%;overflow-x:auto;scrollbar-width:none}
+.seg button{border:0;cursor:pointer;padding:9px 14px;border-radius:999px;background:transparent;font-family:var(--disp);font-size:13.5px;font-weight:500;white-space:nowrap;transition:background .3s,color .3s}
+.seg button.on{background:var(--forest);color:var(--lime)}
+.sub{display:none;flex-direction:column;gap:12px}
+.sub.on{display:flex;animation:fin .5s var(--ease)}
+.parent-box{display:flex;gap:14px;align-items:center;padding:14px 16px;border-radius:18px;background:var(--roseL)}
+.parent-box b{font-family:var(--disp);font-size:15px;color:var(--forest)}
+.parent-box small{display:block;font-size:13.5px;color:#7a4a52;line-height:1.4}
+.parent-box .hd{flex:none;width:44px;height:44px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--rose)}
+/* nutrição donut */
+.donut{display:flex;gap:16px;align-items:center}
+.donut svg{flex:none;width:110px;height:110px;transform:rotate(-90deg)}
+.donut circle{fill:none;stroke-width:12}
+.donut .tr{stroke:var(--mint)}
+.donut .fl{stroke:var(--limeD);stroke-linecap:round;transition:stroke-dashoffset .6s var(--ease)}
+.donut .lab b{display:block;font-family:var(--disp);font-size:18px;color:var(--forest)}
+.donut .lab small{color:var(--mid);font-size:14px}
+/* musicoterapia visual */
+.eq{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;gap:2.2%;padding:16% 12%;background:linear-gradient(160deg,var(--forest),var(--green))}
+.eq i{flex:1;border-radius:999px 999px 6px 6px;background:linear-gradient(var(--lime),var(--sage));height:30%;animation:eq 1.2s ease-in-out infinite alternate;animation-delay:calc(var(--k)*-.13s)}
+@keyframes eq{to{height:calc(20% + var(--h)*1%)}}
+.eq b{position:absolute;left:0;right:0;top:12%;text-align:center;font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(26px,3vw,40px);color:var(--lime)}
+.fono-ill{position:absolute;inset:0;background:radial-gradient(circle at 30% 30%,var(--roseL),var(--mint) 70%)}
+.fono-ill svg{position:absolute;inset:0;width:100%;height:100%}
+.fono-ill .w{fill:none;stroke:var(--green);stroke-width:5;stroke-linecap:round;animation:pulse 2s ease-out infinite;transform-box:fill-box;transform-origin:left center}
+.fono-ill .w:nth-child(2){animation-delay:.35s}.fono-ill .w:nth-child(3){animation-delay:.7s}
+@keyframes pulse{0%{opacity:0;transform:scale(.6)}35%{opacity:1}100%{opacity:0;transform:scale(1.1)}}
+@media(max-width:1060px){
+  .tabs{grid-template-columns:1fr}
+  .tlist{flex-direction:row;overflow-x:auto;gap:8px;padding-bottom:4px;scrollbar-width:none;margin-inline:-20px;padding-inline:20px;scroll-snap-type:x proximity}
+  .tlist::-webkit-scrollbar{display:none}
+  .tb{width:auto;flex:none;padding:10px 14px 12px;font-size:14.5px;background:var(--white);box-shadow:inset 0 0 0 1px var(--line);scroll-snap-align:start}
+  .tb .ic{width:30px;height:30px;border-radius:9px}.tb .ic svg{width:18px;height:18px}
+  .tb .bar{left:12px;right:12px;bottom:4px}
+}
+@media(max-width:760px){.pane{grid-template-columns:minmax(0,1fr)}.pane .ph{min-height:260px;aspect-ratio:16/11}.stage{min-height:0}}
+
+/* ===== Diferenciais: mapa das vivências ===== */
+.diff{background:var(--forest);color:#fff;border-radius:clamp(28px,4vw,48px);margin-inline:clamp(8px,1.4vw,18px);overflow:hidden;position:relative}
+.diff h2{color:#fff}
+.diff h2 .it{color:var(--lime)}
+.diff .sh p{color:rgba(255,255,255,.72)}
+.diff .eyebrow{color:var(--lime)}
+.claim{display:inline-flex;align-items:center;gap:12px;padding:12px 18px;border-radius:999px;background:var(--lime);color:var(--forest);font-family:var(--disp);font-weight:600;font-size:15px}
+.mapbox{display:grid;grid-template-columns:1.15fr .85fr;gap:16px;align-items:stretch}
+.citymap{position:relative;border-radius:var(--r);background:#24503f;overflow:hidden;min-height:520px}
+.citymap svg.bg{position:absolute;inset:0;width:100%;height:100%}
+.citymap .road{fill:none;stroke:rgba(202,225,138,.25);stroke-width:26;stroke-linecap:round;stroke-linejoin:round}
+.citymap .route{fill:none;stroke:var(--lime);stroke-width:3;stroke-dasharray:10 10;stroke-linecap:round;animation:dash 1.2s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-20}}
+.citymap .blk{fill:rgba(255,255,255,.05)}
+.pin{position:absolute;transform:translate(-50%,-100%);border:0;cursor:pointer;background:none;padding:0;display:flex;flex-direction:column;align-items:center;gap:6px}
+.pin .bub{display:grid;place-items:center;width:58px;height:58px;border-radius:50% 50% 50% 4px;transform:rotate(-45deg);background:var(--white);box-shadow:0 14px 28px -12px rgba(0,0,0,.45);transition:transform .45s var(--spring),background .3s}
+.pin .bub svg{transform:rotate(45deg);width:26px;height:26px;color:var(--forest)}
+.pin .nm{font-family:var(--disp);font-size:12.5px;font-weight:600;color:#fff;background:rgba(31,68,54,.75);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.pin:hover .bub{transform:rotate(-45deg) scale(1.08)}
+.pin.on .bub{background:var(--lime);transform:rotate(-45deg) scale(1.15)}
+.pin .ring{position:absolute;top:29px;left:50%;width:58px;height:58px;margin-left:-29px;margin-top:-29px;border-radius:50%;border:2px solid var(--lime);opacity:0}
+.pin.on .ring{animation:ripple 1.8s ease-out infinite}
+@keyframes ripple{from{opacity:.8;transform:scale(.8)}to{opacity:0;transform:scale(2)}}
+.mpanel{border-radius:var(--r);background:var(--white);color:var(--ink);overflow:hidden;display:flex;flex-direction:column}
+.mpanel .ph{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--mint)}
+.mpanel .ph img{width:100%;height:100%;object-fit:cover;animation:fin .6s var(--ease)}
+.mpanel .ph .ct{position:absolute;right:12px;top:12px;font-family:var(--disp);font-weight:600;font-size:13px;padding:6px 12px;border-radius:999px;background:var(--lime);color:var(--forest)}
+.mpanel .bd{padding:22px 24px 24px;display:flex;flex-direction:column;gap:12px;flex:1}
+.mpanel .bd p{color:var(--mid);font-size:15.5px}
+.mpanel .nav2{display:flex;gap:8px;align-items:center;margin-top:auto}
+.mpanel .nav2 button{width:44px;height:44px;border-radius:50%;border:0;cursor:pointer;background:var(--mint);color:var(--forest);font-size:18px;transition:background .3s}
+.mpanel .nav2 button:hover{background:var(--lime)}
+.mpanel .dots{display:flex;gap:5px;margin-left:8px;flex-wrap:wrap}
+.mpanel .dots i{width:8px;height:8px;border-radius:50%;background:var(--mint2);transition:background .3s,width .3s}
+.mpanel .dots i.on{background:var(--green);width:22px;border-radius:8px}
+.terms{display:flex;gap:6px;flex-wrap:wrap}
+.terms span{font-size:12.5px;font-weight:600;padding:5px 10px;border-radius:8px;background:var(--roseL);color:#7a4a52}
+@media(max-width:980px){.mapbox{grid-template-columns:1fr}.citymap{min-height:420px}}
+@media(max-width:520px){.citymap{min-height:380px}.pin .bub{width:48px;height:48px}.pin .bub svg{width:22px;height:22px}.pin .nm{font-size:11px}}
+/* TIM: baralho que arrasta */
+.timrow{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,5vw,70px);align-items:center;margin-top:clamp(70px,9vw,110px)}
+.deck{position:relative;height:clamp(400px,46vw,520px);max-width:440px;width:100%;justify-self:center;touch-action:pan-y}
+.cardd{position:absolute;inset:0;border-radius:var(--r);overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.6);background:var(--green);cursor:grab;transition:transform .5s var(--ease),opacity .5s;user-select:none;-webkit-user-select:none}
+.cardd img{width:100%;height:100%;object-fit:cover;pointer-events:none}
+.cardd .tg{position:absolute;left:14px;bottom:14px;font-family:var(--disp);font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;background:rgba(253,254,251,.92);color:var(--forest)}
+.deck-hint{display:flex;gap:10px;align-items:center;justify-content:center;margin-top:16px;font-size:14px;color:rgba(255,255,255,.7)}
+.timrow .tx{display:flex;flex-direction:column;gap:18px}
+.timrow .tx p{color:rgba(255,255,255,.76)}
+.ticks{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ticks li{display:flex;gap:12px;align-items:flex-start;color:rgba(255,255,255,.9)}
+.ticks li::before{content:"";flex:none;width:22px;height:22px;margin-top:2px;border-radius:7px;background:var(--lime) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%231f4436' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") center/14px no-repeat}
+@media(max-width:900px){.timrow{grid-template-columns:1fr}}
+/* reuniões: órbita */
+.orbitrow{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,70px);align-items:center;margin-top:clamp(70px,9vw,110px)}
+.orbit{position:relative;aspect-ratio:1;max-width:460px;width:100%;justify-self:center}
+.orbit .core{position:absolute;inset:34%;border-radius:50%;background:var(--lime);display:grid;place-items:center;text-align:center;color:var(--forest);font-family:var(--disp);font-weight:600;font-size:clamp(14px,1.6vw,18px);line-height:1.2;box-shadow:0 0 0 12px rgba(202,225,138,.15),0 0 0 24px rgba(202,225,138,.07)}
+.orbit .ringl{position:absolute;inset:6%;border-radius:50%;border:1.5px dashed rgba(202,225,138,.35)}
+.orbit .spin{position:absolute;inset:0;animation:spin 40s linear infinite}
+.orbit .sat{position:absolute;left:50%;top:50%;width:62px;height:62px;margin:-31px;border-radius:50%;background:var(--white);display:grid;place-items:center;color:var(--forest);box-shadow:0 12px 24px -12px rgba(0,0,0,.5);transform:rotate(var(--a)) translate(calc(min(460px,100%) * .44)) rotate(calc(var(--a) * -1))}
+.orbit .sat svg{width:26px;height:26px;animation:spin 40s linear infinite reverse}
+.orbit .sat small{position:absolute;top:100%;margin-top:4px;font-size:10.5px;font-weight:600;color:var(--lime);white-space:nowrap;animation:spin 40s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.orbit .spin .sat{transform:rotate(var(--a)) translateX(var(--rad,190px)) rotate(calc(var(--a) * -1))}
+.meetl{display:grid;gap:10px}
+.meetl div{display:flex;gap:14px;align-items:center;padding:16px 18px;border-radius:18px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.1);transition:background .4s}
+.meetl div b{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:rgba(202,225,138,.15);color:var(--lime);font-family:var(--disp);font-size:15px}
+.meetl div.on{background:rgba(202,225,138,.14)}
+.meetl div.on b{background:var(--lime);color:var(--forest)}
+.meet-ph{border-radius:var(--r);overflow:hidden;aspect-ratio:16/10;margin-top:6px}
+.meet-ph img{width:100%;height:100%;object-fit:cover}
+@media(max-width:900px){.orbitrow{grid-template-columns:1fr}.orbit{max-width:360px}.orbit .sat{width:50px;height:50px;margin:-25px}.orbit .sat svg{width:22px;height:22px}.orbit .sat small{font-size:9.5px}}
+
+/* ===== Conquistas: duas esteiras ===== */
+.belt{display:flex;gap:14px;width:max-content;animation:belt 60s linear infinite}
+.belt.rev{animation-direction:reverse;animation-duration:70s}
+.belts{display:flex;flex-direction:column;gap:14px;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.belts:hover .belt{animation-play-state:paused}
+@keyframes belt{to{transform:translateX(-50%)}}
+.bi{flex:none;height:clamp(200px,24vw,300px);border-radius:22px;overflow:hidden;border:0;padding:0;cursor:zoom-in;background:var(--mint);transition:transform .5s var(--ease)}
+.bi:hover{transform:scale(1.03) rotate(-1deg)}
+.bi img{height:100%;width:auto;max-width:none}
+.lbx{position:fixed;inset:0;z-index:300;background:rgba(31,68,54,.92);backdrop-filter:blur(8px);display:grid;place-items:center;padding:20px}
+.lbx img{max-height:86vh;max-width:min(1000px,100%);border-radius:20px;animation:fin .4s var(--ease)}
+.lbx button{position:absolute;width:52px;height:52px;border-radius:50%;border:0;background:var(--lime);color:var(--forest);font-size:24px;cursor:pointer}
+.lbx .x{top:18px;right:18px}.lbx .pv{left:14px;top:50%}.lbx .nx{right:14px;top:50%}
+
+/* ===== Espaço bento ===== */
+.bento{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:clamp(170px,17vw,230px);gap:14px}
+.bx{position:relative;border-radius:var(--r);overflow:hidden;background:var(--mint);isolation:isolate}
+.bx img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.bx:hover img{transform:scale(1.06)}
+.bx .lb{position:absolute;left:12px;bottom:12px;font-family:var(--disp);font-size:13.5px;font-weight:600;padding:7px 12px;border-radius:999px;background:rgba(253,254,251,.92)}
+.bx::after{content:"";position:absolute;inset:0;background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),rgba(202,225,138,.35),transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.bx:hover::after{opacity:1}
+.bx.w2{grid-column:span 2}.bx.h2{grid-row:span 2}
+.bx.txt{background:var(--lime);padding:22px;display:flex;flex-direction:column;justify-content:space-between}
+.bx.txt b{font-family:var(--disp);font-size:clamp(22px,2.2vw,30px);letter-spacing:-.03em;line-height:1.1;color:var(--forest)}
+@media(max-width:900px){.bento{grid-template-columns:1fr 1fr;grid-auto-rows:180px}.bx.w2{grid-column:span 2}}
+
+/* ===== FAQ ===== */
+.faqgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,5vw,70px);align-items:start}
+.qa{border-radius:20px;background:var(--white);box-shadow:inset 0 0 0 1px var(--line);margin-bottom:10px;overflow:hidden}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:18px 20px;font-family:var(--disp);font-weight:600;font-size:16.5px;letter-spacing:-.01em}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary i{flex:none;width:32px;height:32px;border-radius:50%;background:var(--mint);display:grid;place-items:center;font-style:normal;transition:transform .4s var(--ease),background .3s}
+.qa[open] summary i{transform:rotate(45deg);background:var(--lime)}
+.qa .a{padding:0 20px 18px;color:var(--mid)}
+@media(max-width:900px){.faqgrid{grid-template-columns:1fr}.faqgrid>div:first-child{position:static!important}}
+
+/* ===== Local ===== */
+.locgrid{display:grid;grid-template-columns:.9fr 1.1fr;gap:14px}
+.lcard{border-radius:var(--r);background:var(--white);box-shadow:inset 0 0 0 1px var(--line);padding:clamp(26px,3.6vw,46px);display:flex;flex-direction:column;gap:16px}
+.li{display:flex;gap:14px;align-items:flex-start}
+.li .ic{flex:none;width:44px;height:44px;border-radius:14px;background:var(--mint);color:var(--green);display:grid;place-items:center}
+.li small{display:block;font-family:var(--disp);font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}
+.li div{min-width:0;overflow-wrap:anywhere}
+.li a{text-decoration:none}
+.open{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;padding:2px 10px;border-radius:999px;margin-left:6px;background:var(--mint);color:var(--mid);vertical-align:middle}
+.open.yes{background:var(--lime);color:var(--forest)}
+.open::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.mapw{position:relative;border-radius:var(--r);overflow:hidden;min-height:520px;background:var(--mint)}
+.mapw iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:hue-rotate(-10deg) saturate(.85)}
+@media(max-width:900px){.locgrid{grid-template-columns:1fr}.mapw{min-height:360px}}
+
+/* ===== Final ===== */
+.final{position:relative;border-radius:clamp(28px,4vw,48px);margin:0 clamp(8px,1.4vw,18px);overflow:hidden;background:var(--lime);padding:clamp(70px,10vw,130px) 0;text-align:center}
+.final .wrap{display:flex;flex-direction:column;align-items:center;gap:22px;position:relative;z-index:1}
+.final h2{font-size:clamp(40px,6.4vw,92px)}
+.final p{max-width:48ch;color:var(--forest);opacity:.85;font-size:18px}
+.final .faces{display:flex;justify-content:center}
+.final .faces img{width:64px;height:64px;border-radius:50%;object-fit:cover;border:4px solid var(--lime);margin-left:-14px}
+.final .faces img:first-child{margin-left:0}
+.final .leaf{position:absolute;width:300px;opacity:.25;pointer-events:none}
+footer{padding-block:56px 30px;color:var(--mid);font-size:15px}
+footer .top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;padding-bottom:34px;border-bottom:1px solid var(--line)}
+footer h5{font-family:var(--disp);font-weight:600;color:var(--forest);font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 14px}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+footer a{text-decoration:none;overflow-wrap:anywhere}
+footer a:hover{color:var(--green)}
+footer .bot{padding-top:20px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}
+@media(max-width:900px){footer .top{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){footer .top{grid-template-columns:1fr}}
+
+.js .rv{opacity:0;transform:translateY(40px) scale(.985);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.js .rv.on{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
+
+/* ===== ASSISTENTE "Cati" (esquerda) ===== */
+.ai-btn{position:fixed;left:max(18px,env(safe-area-inset-left));bottom:max(18px,env(safe-area-inset-bottom));z-index:95;display:flex;align-items:center;gap:12px;border:0;cursor:pointer;padding:7px 20px 7px 7px;border-radius:999px;background:var(--forest);color:#fff;font-family:var(--disp);font-weight:600;font-size:14.5px;box-shadow:0 20px 40px -16px rgba(31,68,54,.8);transition:transform .4s var(--spring)}
+.ai-btn:hover{transform:translateY(-3px)}
+.ai-btn .av{position:relative;width:44px;height:44px;border-radius:50%;background:var(--lime);display:grid;place-items:center;color:var(--forest)}
+.ai-btn .av svg{width:24px;height:24px}
+.ai-btn .av::after{content:"";position:absolute;right:0;bottom:0;width:11px;height:11px;border-radius:50%;background:#45d483;border:2px solid var(--forest)}
+.ai-btn small{display:block;font-family:var(--body);font-weight:400;font-size:11.5px;opacity:.7;line-height:1}
+.ai-tease{position:fixed;left:max(18px,env(safe-area-inset-left));bottom:calc(max(18px,env(safe-area-inset-bottom)) + 70px);z-index:94;max-width:min(300px,calc(100vw - 36px));padding:14px 38px 14px 16px;border-radius:20px 20px 20px 6px;background:var(--white);box-shadow:0 0 0 1px var(--line),0 20px 40px -20px rgba(31,68,54,.5);font-size:14.5px;animation:fin .5s var(--ease);cursor:pointer}
+.ai-tease b{color:var(--green)}
+.ai-tease button{position:absolute;right:8px;top:8px;width:26px;height:26px;border:0;border-radius:50%;background:var(--mint);cursor:pointer;font-size:15px;line-height:1}
+.ai{position:fixed;left:max(14px,env(safe-area-inset-left));bottom:calc(max(18px,env(safe-area-inset-bottom)) + 70px);z-index:96;width:min(410px,calc(100vw - 28px));height:min(640px,calc(100svh - 110px));display:flex;flex-direction:column;border-radius:26px;background:var(--white);overflow:hidden;box-shadow:0 0 0 1px var(--line),0 50px 100px -30px rgba(31,68,54,.55);transform-origin:bottom left;animation:aiIn .45s var(--spring)}
+@keyframes aiIn{from{opacity:0;transform:scale(.85) translateY(20px)}}
+.ai-h{display:flex;align-items:center;gap:12px;padding:14px 14px 14px 16px;background:var(--forest);color:#fff}
+.ai-h .av{width:42px;height:42px;border-radius:50%;background:var(--lime);display:grid;place-items:center;color:var(--forest);flex:none}
+.ai-h .av svg{width:24px;height:24px}
+.ai-h b{font-family:var(--disp);font-size:16px;display:block;line-height:1.2}
+.ai-h small{display:flex;align-items:center;gap:6px;font-size:12.5px;opacity:.8}
+.ai-h small::before{content:"";width:7px;height:7px;border-radius:50%;background:#45d483}
+.ai-h .tools{margin-left:auto;display:flex;gap:6px}
+.ai-h .tools button{width:34px;height:34px;border-radius:50%;border:0;cursor:pointer;background:rgba(255,255,255,.12);color:#fff;display:grid;place-items:center}
+.ai-h .tools button:hover{background:rgba(255,255,255,.22)}
+.ai-h .tools svg{width:17px;height:17px}
+.ai-b{flex:1;overflow-y:auto;padding:18px 16px;display:flex;flex-direction:column;gap:12px;background:linear-gradient(180deg,var(--bg),var(--white));scroll-behavior:smooth}
+.msg{max-width:88%;font-size:15px;line-height:1.55;animation:fin .35s var(--ease)}
+.msg.bot{align-self:flex-start;display:flex;gap:8px}
+.msg.bot .mini{flex:none;width:26px;height:26px;border-radius:50%;background:var(--lime);display:grid;place-items:center;color:var(--forest);margin-top:2px}
+.msg.bot .mini svg{width:15px;height:15px}
+.msg.bot .bb{background:var(--white);padding:11px 14px;border-radius:6px 18px 18px 18px;box-shadow:0 0 0 1px var(--line)}
+.msg.user{align-self:flex-end;background:var(--forest);color:#fff;padding:10px 14px;border-radius:18px 18px 6px 18px}
+.msg .bb b{color:var(--forest)}
+.msg .bb ul{margin:6px 0 0;padding-left:18px}
+.msg .bb li{margin:2px 0}
+.msg .bb .wa-cta{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding:9px 14px;border-radius:999px;background:#25d366;color:#fff;text-decoration:none;font-weight:600;font-size:14px}
+.msg .bb .wa-cta svg{width:17px;height:17px}
+.msg .bb .go{display:inline-block;margin-top:8px;color:var(--green);font-weight:600;text-decoration:none}
+.typing .bb{display:flex;gap:5px;align-items:center;padding:14px 16px}
+.typing .bb i{width:7px;height:7px;border-radius:50%;background:var(--sage);animation:tp 1.1s infinite}
+.typing .bb i:nth-child(2){animation-delay:.15s}.typing .bb i:nth-child(3){animation-delay:.3s}
+@keyframes tp{30%{transform:translateY(-5px);background:var(--green)}}
+.ai-s{display:flex;gap:7px;padding:10px 14px;overflow-x:auto;scrollbar-width:none;border-top:1px solid var(--line);background:var(--white)}
+.ai-s::-webkit-scrollbar{display:none}
+.ai-s button{flex:none;border:0;cursor:pointer;padding:8px 13px;border-radius:999px;background:var(--mint);font-size:13.5px;font-weight:500;color:var(--forest);transition:background .25s}
+.ai-s button:hover{background:var(--lime)}
+.ai-f{display:flex;gap:8px;padding:12px;background:var(--white)}
+.ai-f input{flex:1;min-width:0;border:0;border-radius:999px;padding:13px 16px;font:inherit;font-size:15px;background:var(--bg);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+.ai-f input:focus{outline:none;box-shadow:inset 0 0 0 2px var(--sage)}
+.ai-f button{flex:none;width:48px;height:48px;border:0;border-radius:50%;background:var(--forest);color:var(--lime);cursor:pointer;display:grid;place-items:center;transition:transform .3s var(--spring)}
+.ai-f button:hover{transform:scale(1.06)}
+.ai-f button svg{width:20px;height:20px}
+.ai-note{font-size:11.5px;color:var(--mid);text-align:center;padding:0 12px 10px;background:var(--white)}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.js .rv,.fade{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="i-tooth" viewBox="0 0 24 24"><path d="M7 3c2 0 3 1 5 1s3-1 5-1c2.5 0 4 2 4 5 0 4-2 6-2.5 10-.3 2-1.2 3-2 3-1.5 0-1.5-4-4.5-4s-3 4-4.5 4c-.8 0-1.7-1-2-3C5 14 3 12 3 8c0-3 1.5-5 4-5Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-brain" viewBox="0 0 24 24"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a2 2 0 0 0-3-1Zm6 0a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-run" viewBox="0 0 24 24"><circle cx="14" cy="4.5" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 21l3-6 3 2v4M6 11l3-3 4 1 2 3h3M11 15l-1-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bone" viewBox="0 0 24 24"><path d="M12 3v18M8 7h8M7 12h10M8 17h8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="3" r="1.4" fill="currentColor"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24"><path d="M12 7c-1-2-3-3-5-2-3 1.5-3 6-1 10s4 5 6 4c2 1 4 0 6-4s2-8.5-1-10c-2-1-4 0-5 2Zm0 0c0-2 1-4 3-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5c3-1 6-1 8 1 2-2 5-2 8-1v14c-3-1-6-1-8 1-2-2-5-2-8-1Z M12 6v14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V6l11-2v12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="16" r="2.5" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-steth" viewBox="0 0 24 24"><path d="M6 3v6a4 4 0 0 0 8 0V3M10 13v2a5 5 0 0 0 10 0v-2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="20" cy="11" r="2" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-speech" viewBox="0 0 24 24"><path d="M4 5h16v10H10l-5 4v-4H4Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 10h.01M12 10h.01M16 10h.01" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 13V5.5a1.5 1.5 0 0 1 3 0V11m0-6.5a1.5 1.5 0 0 1 3 0V11m0-5a1.5 1.5 0 0 1 3 0v6m0-3.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L5 14a1.5 1.5 0 0 1 2.4-1.8L8 13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M3 4h2l2.4 11h10.4L20 7H6.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="19" r="1.6" fill="currentColor"/><circle cx="17" cy="19" r="1.6" fill="currentColor"/></symbol>
+  <symbol id="i-lib" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10M9 21V10M15 21V10M19 21V10M2 10l10-6 10 6Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-books" viewBox="0 0 24 24"><path d="M4 4h4v16H4zM9 4h4v16H9zM14.5 5l3.8-1 3 15.5-3.8 1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-bot" viewBox="0 0 24 24"><path d="M12 3c-4.4 0-8 3.1-8 7 0 2.2 1.1 4.1 2.9 5.4L6 20l4.2-2.2c.6.1 1.2.2 1.8.2 4.4 0 8-3.1 8-7s-3.6-7-8-7Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-3.3-.8-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.7-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.2 1.2Z"/></symbol>
+  <symbol id="i-arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<div class="intro" id="intro" aria-hidden="true"><svg class="sprout" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" pathLength="1"/></svg><img src="img/logo.png" alt=""></div>
+
+<nav class="nav"><div class="wrap"><div class="bar">
+  <a class="brand" href="#inicio" aria-label="Cativar Multidisciplinar, início"><img src="img/logo-sm.png" alt=""><span><b>Cativar</b><small>Multidisciplinar</small></span></a>
+  <div class="menu" id="menu"><span class="pill" id="mpill"></span><a href="#atendimentos">Atendimentos</a><a href="#vivencias">Vivências</a><a href="#conquistas">Conquistas</a><a href="#espaco">Espaço</a><a href="#duvidas">Dúvidas</a><a href="#contato">Contato</a></div>
+  <a class="btn g wa" href="#" data-msg="Olá! Vim pelo site da Cativar e gostaria de agendar uma avaliação."><svg><use href="#i-wa"/></svg><span>Agendar avaliação</span></a>
+</div></div></nav>
+
+<!-- HERO -->
+<header class="hero" id="inicio"><div class="wrap">
+  <div class="hero-grid">
+    <div class="h-main fade" style="--d:.05s">
+      <svg class="vine" viewBox="0 0 400 400" aria-hidden="true"><path pathLength="1" d="M390 390C300 330 330 250 250 220S120 200 100 120 140 30 60 10"/><path pathLength="1" d="M250 220c30-30 70-30 90-10M180 205c-10-40 10-70 40-80M110 140c-30-10-50 0-60 20"/>
+        <ellipse class="lf" cx="340" cy="205" rx="22" ry="10" transform="rotate(-20 340 205)" style="transition-delay:1.6s"/><ellipse class="lf" cx="222" cy="120" rx="20" ry="9" transform="rotate(-40 222 120)" style="transition-delay:1.9s"/><ellipse class="lf" cx="52" cy="160" rx="18" ry="8" transform="rotate(30 52 160)" style="transition-delay:2.2s"/><ellipse class="lf" cx="70" cy="18" rx="16" ry="7" transform="rotate(-10 70 18)" style="transition-delay:2.5s"/></svg>
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <span class="eyebrow" style="color:var(--lime)">Paulo Afonso - BA · Clínica multidisciplinar</span>
+        <h1>Terapia que vira<br><span class="rot" id="rot"><span class="on">autonomia.</span><span>amizade.</span><span>comunicação.</span><span>confiança.</span><span>vida real.</span></span></h1>
+        <p>Referência em desenvolvimento e bem-estar. Autismo, TDAH e ansiedade, da intervenção precoce à vida adulta, com uma equipe inteira trabalhando junto e vivências que levam cada conquista para fora da sala.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:18px">
+        <div class="row"><a class="btn l wa mag" href="#" data-msg="Olá! Vim pelo site da Cativar e gostaria de agendar uma avaliação.">Agendar avaliação <span class="ar"><svg><use href="#i-arr"/></svg></span></a><button class="btn o" style="color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5)" id="heroAsk">Tirar dúvida com a Cati</button></div>
+        <div class="h-tags"><span>Terapia ABA | Denver</span><span>Infância · Adolescência · Adulto</span><span>Intervenção precoce</span></div>
+      </div>
+    </div>
+    <div class="h-ph fade" style="--d:.2s"><img src="img/resultado-criancas-colchao.jpg" alt="Crianças da Cativar sorrindo juntas"><span class="cap"><i>♥</i>Amizades que nascem aqui</span></div>
+    <div class="h-duo">
+      <div class="h-card lime fade" style="--d:.32s"><span class="stars">★★★★★</span><div><b>5,0</b><small>14 avaliações no Google</small></div></div>
+      <div class="h-card white fade" style="--d:.42s"><img class="lg" src="img/logo-sm.png" alt=""><div><b style="font-size:clamp(34px,3.2vw,46px)"><span class="cnt" data-n="12">12</span>+</b><small>especialidades em um só lugar</small></div></div>
+    </div>
+  </div>
+  <div class="values"><span class="rv"><i></i>Autismo (TEA)</span><span class="rv d1"><i></i>TDAH</span><span class="rv d2"><i></i>Ansiedade</span><span class="rv d3"><i></i>Seletividade alimentar</span><span class="rv d1"><i></i>Dificuldades de aprendizagem</span><span class="rv d2"><i></i>Habilidades sociais</span></div>
+</div></header>
+
+<!-- ATENDIMENTOS -->
+<section class="pad" id="atendimentos"><div class="wrap">
+  <div class="sh"><div class="l"><span class="eyebrow rv">Nossos atendimentos</span><h2 class="rv d1">Tudo o que o desenvolvimento <span class="it">precisa.</span></h2></div><p class="rv d2">Escolha uma especialidade. Cada área conversa com as outras, e é isso que faz o tratamento andar.</p></div>
+  <div class="tabs rv" id="tabs">
+    <div class="tlist" id="tlist" role="tablist">
+      <button class="tb" role="tab" data-t="0"><span class="ic"><svg><use href="#i-tooth"/></svg></span>Odontologia<span class="bar"><i></i></span></button>
+      <button class="tb" role="tab" data-t="1"><span class="ic"><svg><use href="#i-brain"/></svg></span>Psicologia<span class="bar"><i></i></span></button>
+      <button class="tb" role="tab" data-t="2"><span class="ic"><svg><use href="#i-run"/></svg></span>Psicomotricidade<span class="bar"><i></i></span></button>
+      <button class="tb" role="tab" data-t="3"><span class="ic"><svg><use href="#i-bone"/></svg></span>Fisioterapia<span class="bar"><i></i></span></button>
+      <button class="tb" role="tab" data-t="4"><span class="ic"><svg><use href="#i-apple"/></svg></span>Nutrição<span class="bar"><i></i></span></button>
+      <button class="tb" role="tab" data-t="5"><span class="ic"><svg><use href="#i-book"/></svg></span>Psicopedagogia<span class="bar"><i></i></span></button>
+      <button class="tb" role="tab" data-t="6"><span class="ic"><svg><use href="#i-music"/></svg></span>Musicoterapia<span class="bar"><i></i></span></button>
+      <button class="tb" role="tab" data-t="7"><span class="ic"><svg><use href="#i-steth"/></svg></span>Atendimento médico<span class="bar"><i></i></span></button>
+      <button class="tb" role="tab" data-t="8"><span class="ic"><svg><use href="#i-speech"/></svg></span>Fonoaudiologia<span class="bar"><i></i></span></button>
+      <button class="tb" role="tab" data-t="9"><span class="ic"><svg><use href="#i-hand"/></svg></span>T.O. · Integração Sensorial<span class="bar"><i></i></span></button>
+    </div>
+    <div class="stage" id="stage">
+      <div class="pane" data-p="0"><div class="ph"><img src="img/espaco-odonto.jpg" alt="Consultório odontológico" loading="lazy"><span class="il">Consultório odontológico</span></div><div class="bd">
+        <span class="eyebrow">Odontologia</span><h3>Infantil e adultos, <span class="it">com calma.</span></h3>
+        <p>Odontopediatria com tempo, previsibilidade e adaptação sensorial para os pequenos. E atendimento e acompanhamento odontológico completo para adultos.</p>
+        <div class="chips"><span class="k">Odontologia infantil</span><span class="k">Adultos</span><span>Implantes</span><span>Próteses dentárias</span><span>Aparelhos ortodônticos</span><span>Clareamento dental</span></div>
+        <a class="lnk wa" href="#" data-msg="Olá! Gostaria de agendar odontologia na Cativar.">Agendar odontologia <svg><use href="#i-arr"/></svg></a></div></div>
+
+      <div class="pane" data-p="1"><div class="ph"><img id="psyImg" src="img/comportamental-domino.jpg" alt="Recursos de psicologia" loading="lazy"><span class="il" id="psyCap">Dominó do comportamento</span></div><div class="bd">
+        <span class="eyebrow">Psicologia</span><h3>Três frentes, <span class="it">um cuidado.</span></h3>
+        <div class="seg" id="seg"><button class="on" data-s="0">Comportamental</button><button data-s="1">Terapia ABA</button><button data-s="2">Emocional</button></div>
+        <div>
+          <div class="sub on" data-s="0"><p>Atendimento comportamental e <b>treinamentos de iniciativa comportamental</b> em situações do cotidiano, como as idas ao supermercado. Recursos como o dominó do comportamento e tabelas de comportamento tornam o treino concreto.</p></div>
+          <div class="sub" data-s="1"><p><b>Ensino estruturado de habilidades</b>: metas individualizadas, registro de cada resposta e evolução acompanhada de perto. Intervenção precoce com o modelo Denver.</p></div>
+          <div class="sub" data-s="2"><p><b>Escuta e cuidado emocional</b> para crianças, adolescentes e adultos, presencial ou on-line. Um espaço onde histórias ganham voz e novos caminhos se constroem.</p></div>
+        </div>
+        <div class="parent-box"><span class="hd">♥</span><div><b>Acompanhamento psicológico para pais</b><small>Espaço de escuta e acolhimento exclusivo para os pais, com condições especiais.</small></div></div>
+        <a class="lnk wa" href="#" data-msg="Olá! Gostaria de saber sobre psicologia na Cativar.">Agendar psicologia <svg><use href="#i-arr"/></svg></a></div></div>
+
+      <div class="pane" data-p="2"><div class="ph"><img src="img/vivencia-bolas-circulo.jpg" alt="Atividade de psicomotricidade" loading="lazy"><span class="il">Atividade em grupo</span></div><div class="bd">
+        <span class="eyebrow">Psicomotricidade</span><h3>Corpo, movimento <span class="it">e emoção.</span></h3>
+        <p>Recursos simples viram treinos cheios de significado. Cada troca de turno estimula a espera, a atenção compartilhada, as regras, o controle das emoções e a interação com o outro.</p>
+        <div class="chips"><span>Coordenação</span><span>Equilíbrio</span><span>Troca de turno</span><span>Regulação</span></div>
+        <a class="lnk wa" href="#" data-msg="Olá! Gostaria de saber sobre psicomotricidade na Cativar.">Agendar psicomotricidade <svg><use href="#i-arr"/></svg></a></div></div>
+
+      <div class="pane" data-p="3"><div class="ph"><img src="img/espaco-arvores.jpg" alt="Mural de árvores da clínica" loading="lazy"><span class="il">Nosso espaço</span></div><div class="bd">
+        <span class="eyebrow">Fisioterapia</span><h3>Infantil <span class="it">e do adolescente.</span></h3>
+        <p>Desenvolvimento motor, postura, força e marcos do desenvolvimento. Um plano para cada fase: na infância, o movimento é brincadeira; na adolescência, é autonomia e confiança.</p>
+        <div class="chips"><span class="k">Crianças</span><span class="k">Adolescentes</span><span>Desenvolvimento motor</span><span>Postura</span></div>
+        <a class="lnk wa" href="#" data-msg="Olá! Gostaria de saber sobre fisioterapia infantil/adolescente.">Agendar fisioterapia <svg><use href="#i-arr"/></svg></a></div></div>
+
+      <div class="pane" data-p="4"><div class="ph"><img src="img/espaco-mural-nutricao.jpg" alt="Mural dos 10 passos da alimentação" loading="lazy"><span class="il">Mural dos 10 passos</span></div><div class="bd">
+        <span class="eyebrow">Nutrição</span><h3>Comer no tempo <span class="it">da criança.</span></h3>
+        <p>Atendimento nutricional e terapia nutricional, com cuidado especial na seletividade alimentar.</p>
+        <div class="donut"><svg viewBox="0 0 120 120"><circle class="tr" cx="60" cy="60" r="50"/><circle class="fl" id="dn" cx="60" cy="60" r="50" pathLength="10" stroke-dasharray="10" stroke-dashoffset="9"/></svg><div class="lab"><b id="dnT">1. Conhecer</b><small id="dnS">Apresentar o alimento sem pressão.</small></div></div>
+        <a class="lnk wa" href="#" data-msg="Olá! Gostaria de saber sobre nutrição e seletividade alimentar.">Agendar nutrição <svg><use href="#i-arr"/></svg></a></div></div>
+
+      <div class="pane" data-p="5"><div class="ph"><img src="img/psicoped-estante.jpg" alt="Estante com livros e materiais pedagógicos" loading="lazy"><span class="il">Materiais e recursos</span></div><div class="bd">
+        <span class="eyebrow">Psicopedagogia clínica</span><h3>Aprender <span class="it">com leveza.</span></h3>
+        <p>Avaliação e intervenção nas dificuldades de aprendizagem, leitura, escrita, atenção e raciocínio, em parceria com a família e a escola.</p>
+        <div class="chips"><span>Leitura e escrita</span><span>Atenção</span><span>Raciocínio</span><span>Escola</span></div>
+        <a class="lnk wa" href="#" data-msg="Olá! Gostaria de saber sobre psicopedagogia na Cativar.">Agendar psicopedagogia <svg><use href="#i-arr"/></svg></a></div></div>
+
+      <div class="pane" data-p="6"><div class="ph"><div class="eq" aria-hidden="true"><b>ritmo · som · vínculo</b><i style="--k:0;--h:40"></i><i style="--k:1;--h:62"></i><i style="--k:2;--h:30"></i><i style="--k:3;--h:70"></i><i style="--k:4;--h:48"></i><i style="--k:5;--h:66"></i><i style="--k:6;--h:36"></i><i style="--k:7;--h:58"></i><i style="--k:8;--h:44"></i><i style="--k:9;--h:68"></i><i style="--k:10;--h:34"></i></div></div><div class="bd">
+        <span class="eyebrow">Musicoterapia</span><h3>A música <span class="it">abre caminhos.</span></h3>
+        <p>A música como ponte para comunicação, atenção compartilhada, regulação emocional e interação. Ritmo, som e silêncio usados com intenção terapêutica.</p>
+        <div class="chips"><span>Comunicação</span><span>Regulação</span><span>Interação</span></div>
+        <a class="lnk wa" href="#" data-msg="Olá! Gostaria de saber sobre musicoterapia na Cativar.">Agendar musicoterapia <svg><use href="#i-arr"/></svg></a></div></div>
+
+      <div class="pane" data-p="7"><div class="ph"><img src="img/espaco-sala.jpg" alt="Sala de atendimento" loading="lazy"><span class="il">Sala de atendimento</span></div><div class="bd">
+        <span class="eyebrow">Atendimento médico</span><h3>Neurologia <span class="it">e psiquiatria.</span></h3>
+        <p>Avaliação, diagnóstico e acompanhamento do neurodesenvolvimento, integrados às terapias: TEA, TDAH, desregulações comportamentais e do humor, distúrbios do sono e ansiedade.</p>
+        <div class="chips"><span class="k">Neurologia</span><span class="k">Psiquiatria</span><span class="k">Acompanhamento psiquiátrico</span></div>
+        <a class="lnk wa" href="#" data-msg="Olá! Gostaria de agendar consulta de neurologia/psiquiatria na Cativar.">Agendar consulta <svg><use href="#i-arr"/></svg></a></div></div>
+
+      <div class="pane" data-p="8"><div class="ph"><div class="fono-ill" aria-hidden="true"><svg viewBox="0 0 400 300"><circle cx="150" cy="150" r="60" fill="#fdfefb"/><path d="M128 160q22 24 44 0" fill="none" stroke="#2f6b52" stroke-width="6" stroke-linecap="round"/><circle cx="132" cy="138" r="6" fill="#1f4436"/><circle cx="168" cy="138" r="6" fill="#1f4436"/><g transform="translate(220 150)"><path class="w" d="M0-24a34 34 0 0 1 0 48"/><path class="w" d="M20-44a62 62 0 0 1 0 88"/><path class="w" d="M40-64a92 92 0 0 1 0 128"/></g><rect x="40" y="40" width="96" height="46" rx="23" fill="#cae18a"/><text x="88" y="70" text-anchor="middle" font-family="Sora,sans-serif" font-size="20" font-weight="600" fill="#1f4436">ba · pa</text></svg></div><span class="il">Imagem ilustrativa</span></div><div class="bd">
+        <span class="eyebrow">Fonoaudiologia</span><h3>Cada palavra <span class="it">conta.</span></h3>
+        <p>Linguagem, fala, comunicação e alimentação, com estratégias lúdicas. Da primeira palavra à comunicação alternativa, ampliando a forma como a criança se expressa.</p>
+        <div class="chips"><span>Linguagem</span><span>Fala</span><span>Comunicação alternativa</span><span>Alimentação</span></div>
+        <a class="lnk wa" href="#" data-msg="Olá! Gostaria de saber sobre fonoaudiologia na Cativar.">Agendar fonoaudiologia <svg><use href="#i-arr"/></svg></a></div></div>
+
+      <div class="pane" data-p="9"><div class="ph"><img src="img/espaco-casinha.jpg" alt="Sala de integração sensorial" loading="lazy"><span class="il">Sala de Integração Sensorial</span></div><div class="bd">
+        <span class="eyebrow">Terapia Ocupacional</span><h3>Com <span class="it">Integração Sensorial.</span></h3>
+        <p>A <b>Integração Sensorial</b> ajuda a criança a organizar o que sente pelo corpo, pelo movimento, pelo toque e pelos sons, para se regular e ganhar autonomia nas atividades de vida diária.</p>
+        <div class="chips"><span class="k">Integração Sensorial</span><span>Regulação</span><span>AVDs</span><span>Autonomia</span></div>
+        <a class="lnk wa" href="#" data-msg="Olá! Gostaria de saber sobre terapia ocupacional com integração sensorial.">Agendar T.O. <svg><use href="#i-arr"/></svg></a></div></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- DIFERENCIAIS -->
+<section class="diff pad" id="vivencias"><div class="wrap">
+  <div class="sh"><div class="l"><span class="eyebrow rv">Nossos diferenciais</span><h2 class="rv d1">A cidade é nossa <span class="it">sala de terapia.</span></h2><span class="claim rv d2">✦ Nosso principal diferencial: vivências e generalização de comportamentos</span></div><p class="rv d2">O que a criança aprende em sessão, ela pratica no mundo. Toque nos pontos do mapa.</p></div>
+  <div class="mapbox rv">
+    <div class="citymap" id="citymap">
+      <svg class="bg" viewBox="0 0 600 520" preserveAspectRatio="none" aria-hidden="true">
+        <rect class="blk" x="40" y="40" width="150" height="110" rx="14"/><rect class="blk" x="240" y="30" width="120" height="90" rx="14"/><rect class="blk" x="420" y="60" width="140" height="120" rx="14"/><rect class="blk" x="60" y="230" width="120" height="120" rx="14"/><rect class="blk" x="260" y="200" width="140" height="110" rx="14"/><rect class="blk" x="440" y="260" width="120" height="140" rx="14"/><rect class="blk" x="90" y="400" width="200" height="90" rx="14"/><rect class="blk" x="330" y="380" width="80" height="110" rx="14"/>
+        <path class="road" d="M120 440C120 330 200 300 300 330S470 360 490 230 380 110 300 160 180 180 150 110"/>
+        <path class="route" d="M120 440C120 330 200 300 300 330S470 360 490 230 380 110 300 160 180 180 150 110"/>
+      </svg>
+      <button class="pin on" style="left:20%;top:84%" data-v="0"><span class="ring"></span><span class="bub"><svg><use href="#i-home"/></svg></span><span class="nm">Clínica</span></button>
+      <button class="pin" style="left:50%;top:63%" data-v="1"><span class="ring"></span><span class="bub"><svg><use href="#i-cart"/></svg></span><span class="nm">Supermercado</span></button>
+      <button class="pin" style="left:81.6%;top:44%" data-v="2"><span class="ring"></span><span class="bub"><svg><use href="#i-lib"/></svg></span><span class="nm">Biblioteca municipal</span></button>
+      <button class="pin" style="left:50%;top:31%" data-v="3"><span class="ring"></span><span class="bub"><svg><use href="#i-books"/></svg></span><span class="nm">Livraria</span></button>
+      <button class="pin" style="left:25%;top:21%" data-v="4"><span class="ring"></span><span class="bub"><svg viewBox="0 0 24 24"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="16" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M2 20c0-3.3 2.7-6 6-6 1.6 0 3 .6 4 1.6 1-1 2.4-1.6 4-1.6 3.3 0 6 2.7 6 6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></span><span class="nm">Passeios do grupo</span></button>
+    </div>
+    <div class="mpanel" id="mpanel" aria-live="polite">
+      <div class="ph"><img id="mpI" src="img/espaco-mercadinho.jpg" alt=""><span class="ct" id="mpC">1/2</span></div>
+      <div class="bd"><span class="eyebrow" id="mpE">Na clínica</span><h4 id="mpT"></h4><p id="mpP"></p><div class="terms" id="mpTerms"></div>
+        <div class="nav2"><button id="mpPrev" aria-label="Anterior">‹</button><button id="mpNext" aria-label="Próximo">›</button><span class="dots" id="mpDots"></span></div></div>
+    </div>
+  </div>
+
+  <div class="timrow">
+    <div><div class="deck" id="deck">
+      <div class="cardd"><img src="img/ths-adolescentes-sala-sensorial.jpg" alt="Grupo TIM reunido" draggable="false"><span class="tg">Grupo TIM</span></div>
+      <div class="cardd"><img src="img/ths-biblioteca.jpg" alt="Treino de habilidades sociais na biblioteca" draggable="false"><span class="tg">Biblioteca municipal</span></div>
+      <div class="cardd"><img src="img/resultado-adolescentes-sala.jpg" alt="Adolescentes juntos na sala" draggable="false"><span class="tg">Vivências</span></div>
+      <div class="cardd"><img src="img/vivencia-pulseiras-maos.jpg" alt="Mãos unidas com pulseiras" draggable="false"><span class="tg">Passeio em grupo</span></div>
+      <div class="cardd"><img src="img/resultado-adolescentes-festa-2.jpg" alt="Comemoração dos adolescentes" draggable="false"><span class="tg">Nossa história</span></div>
+    </div><div class="deck-hint">⟵ Arraste as fotos ⟶</div></div>
+    <div class="tx">
+      <span class="eyebrow rv" style="color:var(--lime)">Treinamento de Habilidades Sociais (THS)</span>
+      <h2 class="rv d1">Grupo <span class="it">TIM</span></h2>
+      <p class="rv d2">Um grupo de vivências e ampliação de habilidades socioemocionais para adolescentes. Treino estruturado em ambientes externos e naturalizados, com situações que aproximam a prática da rotina deles e favorecem a generalização dos comportamentos aprendidos para outros contextos do dia a dia.</p>
+      <ul class="ticks rv d2"><li>Ambientes externos e naturalizados</li><li>Situações próximas da rotina dos adolescentes</li><li>Generalização para a vida real</li></ul>
+      <div class="rv d3"><a class="btn l wa mag" href="#" data-msg="Olá! Gostaria de saber sobre o Grupo TIM para adolescentes.">Quero saber do Grupo TIM <span class="ar"><svg><use href="#i-arr"/></svg></span></a></div>
+    </div>
+  </div>
+
+  <div class="orbitrow">
+    <div class="orbit" id="orbit"><span class="ringl"></span><div class="spin" id="spin"></div><div class="core">Seu filho<br>no centro</div></div>
+    <div style="display:flex;flex-direction:column;gap:18px">
+      <span class="eyebrow rv" style="color:var(--lime)">Reuniões multidisciplinares periódicas</span>
+      <h2 class="rv d1" style="font-size:clamp(34px,4.2vw,56px)">Uma equipe <span class="it">que conversa.</span></h2>
+      <div class="meetl" id="meetl"><div><b>1</b>Alinhamento terapêutico</div><div><b>2</b>Discussão de casos clínicos</div><div><b>3</b>Acompanhamento da evolução</div><div><b>4</b>Revisão conjunta das estratégias de intervenção</div></div>
+      <div class="meet-ph rv"><img src="img/equipe-reuniao-sala.jpg" alt="Equipe da Cativar em reunião" loading="lazy"></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- CONQUISTAS -->
+<section class="pad" id="conquistas">
+  <div class="wrap sh"><div class="l"><span class="eyebrow rv">Conquistas</span><h2 class="rv d1">O sucesso do tratamento <span class="it">tem rosto.</span></h2></div><p class="rv d2">Crianças e adolescentes que hoje dividem a mesa, o bolo e as conquistas. Toque para ampliar.</p></div>
+  <div class="belts" id="belts"><div class="belt" id="belt1"></div><div class="belt rev" id="belt2"></div></div>
+</section>
+
+<!-- ESPAÇO -->
+<section class="pad" id="espaco" style="padding-top:0"><div class="wrap">
+  <div class="sh"><div class="l"><span class="eyebrow rv">Nosso espaço</span><h2 class="rv d1">Pensado em <span class="it">cada detalhe.</span></h2></div></div>
+  <div class="bento" id="bento">
+    <div class="bx w2 h2 rv"><img src="img/espaco-recepcao.jpg" alt="Recepção iluminada" loading="lazy"><span class="lb">Recepção</span></div>
+    <div class="bx rv d1"><img src="img/espaco-fachada.jpg" alt="Fachada" loading="lazy"><span class="lb">Fachada</span></div>
+    <div class="bx txt rv d2"><span class="eyebrow">Rua Alagoas, 5</span><b>Uma casa inteira dedicada ao desenvolvimento.</b></div>
+    <div class="bx rv d1"><img src="img/espaco-casinha.jpg" alt="Integração sensorial" loading="lazy"><span class="lb">Integração sensorial</span></div>
+    <div class="bx rv d2"><img src="img/espaco-mercadinho.jpg" alt="Mercadinho simulado" loading="lazy"><span class="lb">Mercadinho simulado</span></div>
+    <div class="bx w2 rv"><img src="img/espaco-redes.jpg" alt="Área externa" loading="lazy" style="object-position:50% 70%"><span class="lb">Área externa</span></div>
+    <div class="bx rv d1"><img src="img/espaco-mural-nutricao.jpg" alt="Cozinha terapêutica" loading="lazy"><span class="lb">Cozinha terapêutica</span></div>
+    <div class="bx rv d2"><img src="img/espaco-odonto.jpg" alt="Odontologia" loading="lazy"><span class="lb">Odontologia</span></div>
+  </div>
+</div></section>
+
+<!-- DÚVIDAS -->
+<section class="pad" id="duvidas" style="padding-top:0"><div class="wrap faqgrid">
+  <div style="display:flex;flex-direction:column;gap:18px;position:sticky;top:110px">
+    <span class="eyebrow rv">Dúvidas frequentes</span><h2 class="rv d1" style="font-size:clamp(34px,4.2vw,56px)">Perguntas <span class="it">de quem chega.</span></h2>
+    <p class="muted rv d2">Não achou sua dúvida? A Cati, nossa assistente, responde na hora.</p>
+    <div class="rv d3"><button class="btn g" id="faqAsk">Perguntar para a Cati <span class="ar"><svg><use href="#i-arr"/></svg></span></button></div>
+  </div>
+  <div>
+    <details class="qa rv"><summary>Como começa o atendimento?<i>+</i></summary><div class="a">Pelo WhatsApp você agenda uma avaliação. A equipe entende a história, as necessidades e monta o plano com as especialidades indicadas.</div></details>
+    <details class="qa rv"><summary>Vocês atendem adultos?<i>+</i></summary><div class="a">Sim. A Cativar atende infância, adolescência e adultos, inclusive com psicologia on-line para adolescentes e adultos.</div></details>
+    <details class="qa rv"><summary>O que são as vivências?<i>+</i></summary><div class="a">São treinos feitos em ambientes reais, como supermercado, livraria e biblioteca municipal, para que a criança generalize o que aprendeu em sessão.</div></details>
+    <details class="qa rv"><summary>Trabalham com terapia ABA e Denver?<i>+</i></summary><div class="a">Sim. Terapia ABA com ensino estruturado de habilidades e intervenção precoce com o modelo Denver.</div></details>
+    <details class="qa rv"><summary>Existe acompanhamento para os pais?<i>+</i></summary><div class="a">Sim: acompanhamento psicológico especializado para pais, um espaço de escuta e acolhimento exclusivo, com condições especiais.</div></details>
+    <details class="qa rv"><summary>Qual o horário de funcionamento?<i>+</i></summary><div class="a">De segunda a sexta, das 08h às 18h, na Rua Alagoas, 5, Panorama, Paulo Afonso - BA.</div></details>
+  </div>
+</div></section>
+
+<!-- LOCAL -->
+<section id="contato" style="padding-bottom:clamp(60px,8vw,100px)"><div class="wrap">
+  <div class="sh"><div class="l"><span class="eyebrow rv">Contato</span><h2 class="rv d1">Venha <span class="it">nos visitar.</span></h2></div></div>
+  <div class="locgrid">
+    <div class="lcard rv">
+      <div class="li"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>Endereço</small>Rua Alagoas, 5 · Panorama<br>Paulo Afonso - BA · 48605-036</div></div>
+      <div class="li"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><small>Horário <span class="open" id="open">…</span></small>Segunda a sexta · 08h às 18h</div></div>
+      <div class="li"><span class="ic"><svg width="22" height="22"><use href="#i-wa"/></svg></span><div><small>WhatsApp</small><a class="wa" href="#" data-msg="Olá! Vim pelo site da Cativar.">(75) 98705-8503</a></div></div>
+      <div class="li"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><div><small>E-mail</small><a href="mailto:cativarclinicamultidisciplinar@gmail.com">cativarclinicamultidisciplinar@gmail.com</a></div></div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:auto"><a class="btn g" href="https://www.google.com/maps/dir/?api=1&destination=Cativar+Multidisciplinar,+Rua+Alagoas,+5,+Panorama,+Paulo+Afonso+-+BA" target="_blank" rel="noopener">Traçar rota <span class="ar"><svg><use href="#i-arr"/></svg></span></a><a class="btn o wa" href="#" data-msg="Olá! Gostaria de agendar uma visita à Cativar.">Agendar visita</a></div>
+    </div>
+    <div class="mapw rv d1"><iframe title="Mapa da Cativar Multidisciplinar" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Cativar+Multidisciplinar,+Rua+Alagoas,+5,+Panorama,+Paulo+Afonso+-+BA,+48605-036&output=embed"></iframe></div>
+  </div>
+</div></section>
+
+<section class="final rv">
+  <svg class="leaf" style="left:-60px;top:-40px" viewBox="0 0 100 100"><path d="M10 90C10 40 40 10 90 10 90 60 60 90 10 90Z" fill="#2f6b52"/></svg>
+  <svg class="leaf" style="right:-70px;bottom:-60px;transform:rotate(180deg)" viewBox="0 0 100 100"><path d="M10 90C10 40 40 10 90 10 90 60 60 90 10 90Z" fill="#2f6b52"/></svg>
+  <div class="wrap">
+    <div class="faces"><img src="img/resultado-tres-meninos-logo.jpg" alt=""><img src="img/resultado-menina-bolo.jpg" alt=""><img src="img/resultado-menino-bolo.jpg" alt=""><img src="img/livraria-menina.jpg" alt=""></div>
+    <h2>A próxima conquista <span class="it" style="color:var(--green)">pode ser a sua.</span></h2>
+    <p>Fale com a equipe da Cativar e agende uma avaliação. A gente te orienta sobre o melhor caminho.</p>
+    <a class="btn g wa mag" href="#" data-msg="Olá! Vim pelo site da Cativar e gostaria de agendar uma avaliação.">Agendar pelo WhatsApp <span class="ar"><svg><use href="#i-arr"/></svg></span></a>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <div class="top">
+    <div style="display:flex;flex-direction:column;gap:14px"><a class="brand" href="#inicio"><img src="img/logo-sm.png" alt=""><span><b>Cativar</b><small>Multidisciplinar</small></span></a><p>Referência em desenvolvimento e bem-estar.</p></div>
+    <div><h5>Atendimentos</h5><ul><li><a href="#atendimentos">Psicologia e ABA</a></li><li><a href="#atendimentos">Fonoaudiologia</a></li><li><a href="#atendimentos">T.O. e Integração Sensorial</a></li><li><a href="#atendimentos">Neurologia e Psiquiatria</a></li></ul></div>
+    <div><h5>Contato</h5><ul><li><a class="wa" href="#" data-msg="Olá! Vim pelo site.">(75) 98705-8503</a></li><li><a href="mailto:cativarclinicamultidisciplinar@gmail.com">E-mail</a></li><li><a href="https://www.instagram.com/cativar_multidisciplinar_/" target="_blank" rel="noopener">Instagram</a></li></ul></div>
+    <div><h5>Endereço</h5><p>Rua Alagoas, 5 · Panorama<br>Paulo Afonso - BA<br>Seg a sex · 08h às 18h</p></div>
+  </div>
+  <div class="bot"><span>© <span id="yr">2026</span> Cativar Multidisciplinar</span><span>Paulo Afonso - BA</span></div>
+</div></footer>
+
+<div class="lbx" id="lbx" hidden role="dialog" aria-label="Foto ampliada"><button class="x" id="lbX" aria-label="Fechar">×</button><button class="pv" id="lbP" aria-label="Anterior">‹</button><img id="lbI" alt=""><button class="nx" id="lbN" aria-label="Próxima">›</button></div>
+
+<!-- ASSISTENTE CATI -->
+<div class="ai-tease" id="tease" hidden><button id="teaseX" aria-label="Fechar">×</button>Oi! Sou a <b>Cati</b>. Quer ajuda para descobrir <b>qual terapia</b> é indicada para seu filho?</div>
+<button class="ai-btn" id="aiBtn" aria-expanded="false" aria-controls="ai"><span class="av"><svg><use href="#i-bot"/></svg></span><span>Cati<small>Assistente virtual</small></span></button>
+<section class="ai" id="ai" hidden role="dialog" aria-label="Cati, assistente virtual da Cativar">
+  <div class="ai-h"><span class="av"><svg><use href="#i-bot"/></svg></span><div><b>Cati · Assistente Cativar</b><small>Online agora</small></div>
+    <div class="tools"><button id="aiReset" aria-label="Recomeçar conversa" title="Recomeçar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg></button><button id="aiX" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button></div></div>
+  <div class="ai-b" id="aiB" aria-live="polite"></div>
+  <div class="ai-s" id="aiS"></div>
+  <form class="ai-f" id="aiF"><input id="aiI" placeholder="Escreva sua pergunta…" autocomplete="off" aria-label="Sua pergunta" maxlength="300"><button aria-label="Enviar"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5 21 12 3 3.5v6.6l12 1.9-12 1.9Z"/></svg></button></form>
+  <div class="ai-note">Respostas sobre a Cativar. Para agendar, a Cati te leva ao WhatsApp.</div>
+</section>
+
+<script>
+document.documentElement.classList.add('js');
+const WA='5575987058503', wa=m=>'https://wa.me/'+WA+'?text='+encodeURIComponent(m);
+const bindWA=r=>r.querySelectorAll('.wa').forEach(a=>{a.href=wa(a.dataset.msg||'Olá! Vim pelo site da Cativar.');a.target='_blank';a.rel='noopener'});
+bindWA(document);
+document.getElementById('yr').textContent=new Date().getFullYear();
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, fine=matchMedia('(hover:hover)').matches;
+
+// entrada
+setTimeout(()=>{document.getElementById('intro').classList.add('go');document.body.classList.add('ready');setTimeout(()=>document.getElementById('intro').remove(),1300)},reduce?50:1150);
+
+// palavras girando
+(function(){const s=[...document.querySelectorAll('#rot span')];let i=0;const box=document.getElementById('rot');
+  const fit=()=>{box.style.width=Math.max(...s.map(x=>x.offsetWidth))+'px'};fit();addEventListener('resize',fit);
+  if(!reduce)setInterval(()=>{s[i].classList.remove('on');s[i].classList.add('out');const o=s[i];setTimeout(()=>o.classList.remove('out'),700);i=(i+1)%s.length;s[i].classList.add('on')},2300)})();
+
+// menu com pílula
+(function(){const m=document.getElementById('menu'),p=document.getElementById('mpill'),as=[...m.querySelectorAll('a')],secs=as.map(a=>document.querySelector(a.getAttribute('href')));
+  const put=a=>{if(!a){p.style.opacity=0;return}p.style.opacity=1;p.style.left=a.offsetLeft+'px';p.style.width=a.offsetWidth+'px'};
+  addEventListener('scroll',()=>{let k=-1;secs.forEach((s,i)=>{if(s&&s.getBoundingClientRect().top<innerHeight*.4)k=i});put(as[k])},{passive:true})})();
+
+// revelar
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(x=>io.observe(x));
+
+// abas de atendimentos com autoplay
+(function(){const tbs=[...document.querySelectorAll('.tb')],ps=[...document.querySelectorAll('.pane')],stage=document.getElementById('stage');let cur=-1,auto=true,t0=0,vis=false;const DUR=7000;
+  function set(i,user){if(i===cur)return;cur=i;tbs.forEach((b,k)=>{b.classList.toggle('on',k===i);b.setAttribute('aria-selected',k===i)});ps.forEach((p,k)=>p.classList.toggle('on',k===i));t0=performance.now();
+    if(user){auto=false;tbs.forEach(b=>b.querySelector('.bar i').style.transform='scaleX(1)')}
+    const b=tbs[i];if(innerWidth<=1060){const l=b.parentElement;l.scrollTo({left:b.offsetLeft-20,behavior:'smooth'})}}
+  tbs.forEach((b,i)=>b.addEventListener('click',()=>set(i,true)));
+  new IntersectionObserver(e=>vis=e[0].isIntersecting,{threshold:.3}).observe(stage);
+  set(0);(function f(t){requestAnimationFrame(f);if(!auto||reduce)return;if(!vis){t0=t-((tbs[cur]._p||0)*DUR);return}const p=Math.min(1,(t-t0)/DUR);tbs[cur]._p=p;tbs[cur].querySelector('.bar i').style.transform='scaleX('+p+')';if(p>=1){tbs[cur]._p=0;set((cur+1)%tbs.length)}})(performance.now());
+  // psicologia: subabas
+  const seg=[...document.querySelectorAll('#seg button')],subs=[...document.querySelectorAll('.sub')],img=document.getElementById('psyImg'),cap=document.getElementById('psyCap');
+  const P=[['img/comportamental-domino.jpg','Dominó do comportamento'],['img/grupo-atividade-externa.jpg','Ensino estruturado'],['img/emocional-ursinho.jpg','Acolhimento']];
+  seg.forEach((b,i)=>b.onclick=()=>{auto=false;seg.forEach(x=>x.classList.toggle('on',x===b));subs.forEach((s,k)=>s.classList.toggle('on',k===i));img.style.opacity=0;setTimeout(()=>{img.src=P[i][0];cap.textContent=P[i][1];img.style.opacity=1},250)});
+  img.style.transition='opacity .25s, transform 1.6s';
+  // nutrição: anel dos 10 passos
+  const S=[['Conhecer','Apresentar o alimento sem pressão.'],['Interagir','O alimento entra na brincadeira.'],['Cheirar','Explorar o aroma e nomear.'],['Tocar','Sentir a textura no tempo da criança.'],['Criar','Montar formas com os alimentos.'],['Misturar','Combinar e observar.'],['Cozinhar','Participar do preparo.'],['Experimentar','Provar um pedacinho já é conquista.'],['Compartilhar','Dividir a mesa com o outro.'],['Limpar','Concluir organizando o espaço.']];
+  const dn=document.getElementById('dn'),dT=document.getElementById('dnT'),dS=document.getElementById('dnS');let n=0;
+  setInterval(()=>{n=(n+1)%10;dn.style.strokeDashoffset=9-n;dT.textContent=(n+1)+'. '+S[n][0];dS.textContent=S[n][1]},1800);
+})();
+
+// mapa das vivências
+(function(){
+  const V=[
+   {e:'Na clínica',steps:[{i:'img/espaco-mercadinho.jpg',t:'Antecipação em sessão',p:'O mercadinho simulado prepara a criança: lista, busca, fila e pagamento ensaiados antes da vida real.',terms:['Antecipação']},{i:'img/comportamental-domino.jpg',t:'Treino comportamental',p:'Recursos como o dominó do comportamento ajudam a entender situações sociais: o que aconteceu, o que eu faço.',terms:['Psicologia comportamental']}]},
+   {e:'Supermercado',steps:[{i:'img/super-lista-menina.jpg',t:'Mapeamento para rastreio visual',p:'A lista com imagens orienta o olhar para percorrer as prateleiras e localizar cada item.',terms:['Mapeamento para rastreio visual']},{i:'img/super-lista-menina-2.jpg',t:'Plano de modelagem',p:'Cada passo é modelado e reforçado até que a criança execute sozinha: comparar, conferir, marcar.',terms:['Plano de modelagem']},{i:'img/super-frutas-menino.jpg',t:'Tomar a iniciativa',p:'Percorrer o ambiente, procurar e identificar os itens por conta própria.',terms:['Iniciativa']},{i:'img/super-acougue-adolescentes.jpg',t:'Comunicar e esperar',p:'Pedir no balcão, aguardar a vez e responder: interação social de verdade.',terms:['Habilidades sociais']},{i:'img/super-caixa-menina.jpg',t:'No caixa',p:'Organizar as compras e concluir a tarefa com quem atende.',terms:['Autonomia']},{i:'img/super-saida-menina.jpg',t:'Missão cumprida',p:'Sacola na mão: o que nasceu em sessão agora faz parte da vida.',terms:['Generalização']}]},
+   {e:'Biblioteca municipal',steps:[{i:'img/ths-biblioteca.jpg',t:'Habilidades sociais em espaço público',p:'Participar de uma atividade em grupo, esperar, pedir ajuda e interagir num lugar real da cidade.',terms:['Treinamento de Habilidades Sociais']}]},
+   {e:'Livraria',steps:[{i:'img/livraria-menina.jpg',t:'Generalização na livraria',p:'Explorar, escolher e se comunicar com autonomia num ambiente novo.',terms:['Generalização']}]},
+   {e:'Passeios do grupo',steps:[{i:'img/vivencia-pulseiras-maos.jpg',t:'Vivências em grupo',p:'Cada saída tem objetivos terapêuticos claros, e muita alegria no caminho.',terms:['Grupo TIM','Ambientes naturalizados']},{i:'img/grupo-atividade-externa.jpg',t:'Atividades ao ar livre',p:'Cooperação, troca de turno e comunicação em atividades conjuntas.',terms:['Interação']}]}];
+  const pins=[...document.querySelectorAll('.pin')],I=document.getElementById('mpI'),C=document.getElementById('mpC'),E=document.getElementById('mpE'),T=document.getElementById('mpT'),P=document.getElementById('mpP'),TM=document.getElementById('mpTerms'),D=document.getElementById('mpDots');let v=0,s=0;
+  function show(){const st=V[v].steps[s];I.style.animation='none';I.offsetWidth;I.style.animation='';I.src=st.i;I.alt=st.t;C.textContent=(s+1)+'/'+V[v].steps.length;E.textContent=V[v].e;T.textContent=st.t;P.textContent=st.p;TM.innerHTML=st.terms.map(x=>'<span>'+x+'</span>').join('');D.innerHTML=V[v].steps.map((_,k)=>'<i class="'+(k===s?'on':'')+'"></i>').join('');pins.forEach((p,k)=>p.classList.toggle('on',k===v))}
+  pins.forEach((p,k)=>p.onclick=()=>{v=k;s=0;show()});
+  document.getElementById('mpNext').onclick=()=>{s++;if(s>=V[v].steps.length){v=(v+1)%V.length;s=0}show()};
+  document.getElementById('mpPrev').onclick=()=>{s--;if(s<0){v=(v-1+V.length)%V.length;s=V[v].steps.length-1}show()};
+  v=1;show();
+})();
+
+// baralho arrastável
+(function(){const d=document.getElementById('deck');let cards=[...d.children];
+  const lay=()=>cards.forEach((c,i)=>{c.style.zIndex=cards.length-i;c.style.transform='translate('+(i*10)+'px,'+(i*-8)+'px) rotate('+(i*3-(i?2:0))+'deg) scale('+(1-i*.04)+')';c.style.opacity=i>3?0:1});
+  lay();let sx=0,dx=0,drag=false,top=null;
+  d.addEventListener('pointerdown',e=>{top=cards[0];if(!top.contains(e.target))return;drag=true;sx=e.clientX;dx=0;top.style.transition='none';top.setPointerCapture(e.pointerId)});
+  d.addEventListener('pointermove',e=>{if(!drag)return;dx=e.clientX-sx;top.style.transform='translate('+dx+'px,0) rotate('+dx/14+'deg)'});
+  const end=()=>{if(!drag)return;drag=false;top.style.transition='';if(Math.abs(dx)>80){top.style.transform='translate('+(dx>0?600:-600)+'px,40px) rotate('+(dx>0?30:-30)+'deg)';top.style.opacity=0;setTimeout(()=>{cards.push(cards.shift());top.style.transition='none';lay();top.offsetWidth;top.style.transition=''},350)}else lay()};
+  d.addEventListener('pointerup',end);d.addEventListener('pointercancel',end);
+  d.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){cards.push(cards.shift());lay()}});d.tabIndex=0;
+  if(!reduce)setInterval(()=>{if(!drag&&d.getBoundingClientRect().top<innerHeight&&!d.matches(':hover')){const t=cards[0];t.style.transform='translate(-600px,40px) rotate(-30deg)';t.style.opacity=0;setTimeout(()=>{cards.push(cards.shift());t.style.transition='none';lay();t.offsetWidth;t.style.transition=''},350)}},4200);
+})();
+
+// órbita
+(function(){const sp=document.getElementById('spin'),o=document.getElementById('orbit');
+  const A=[['i-brain','Psicologia'],['i-speech','Fono'],['i-hand','T.O.'],['i-run','Psicomotr.'],['i-apple','Nutrição'],['i-book','Psicoped.'],['i-music','Música'],['i-steth','Médicos'],['i-bone','Fisio'],['i-tooth','Odonto']];
+  A.forEach((a,i)=>{const s=document.createElement('span');s.className='sat';s.style.setProperty('--a',(i*360/A.length)+'deg');s.innerHTML='<svg><use href="#'+a[0]+'"/></svg><small>'+a[1]+'</small>';sp.appendChild(s)});
+  const rs=()=>sp.style.setProperty('--rad',(o.offsetWidth*(innerWidth<600?.39:.44))+'px');rs();addEventListener('resize',rs);
+  [...sp.children].forEach(s=>s.style.removeProperty('transform'));
+  const m=[...document.querySelectorAll('#meetl div')];let k=0;setInterval(()=>{m.forEach((x,i)=>x.classList.toggle('on',i===k));k=(k+1)%m.length},1700);
+})();
+
+// esteiras de conquistas
+(function(){const A=['resultado-criancas-logo','resultado-adolescentes-festa-2','resultado-menina-bolo','resultado-criancas-aniversario','vivencia-maos-mesa','resultado-tres-meninos-logo'],B=['resultado-menino-bolo','resultado-adolescentes-festa','resultado-criancas-colchao','resultado-adolescentes-sala','equipe-recepcao','livraria-menina'];
+  const all=[];const mk=(id,arr)=>{const b=document.getElementById(id);[...arr,...arr].forEach((n,i)=>{const x=document.createElement('button');x.className='bi';x.innerHTML='<img src="img/'+n+'.jpg" alt="Momento de conquista na Cativar" loading="lazy">';if(i<arr.length)all.push('img/'+n+'.jpg');x.onclick=()=>open(all.indexOf('img/'+n+'.jpg'));b.appendChild(x)})};
+  mk('belt1',A);mk('belt2',B);
+  const lb=document.getElementById('lbx'),im=document.getElementById('lbI');let k=0;
+  function open(i){k=(i+all.length)%all.length;im.src=all[k];lb.hidden=false}
+  document.getElementById('lbX').onclick=()=>lb.hidden=true;document.getElementById('lbP').onclick=()=>open(k-1);document.getElementById('lbN').onclick=()=>open(k+1);
+  lb.onclick=e=>{if(e.target===lb)lb.hidden=true};addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')lb.hidden=true;if(e.key==='ArrowRight')open(k+1);if(e.key==='ArrowLeft')open(k-1)});
+})();
+
+// luz que segue o mouse no bento
+document.querySelectorAll('.bx').forEach(b=>b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.setProperty('--mx',(e.clientX-r.left)+'px');b.style.setProperty('--my',(e.clientY-r.top)+'px')}));
+// magnético
+if(fine&&!reduce)document.querySelectorAll('.mag').forEach(b=>{b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.setProperty('--x',(e.clientX-r.left-r.width/2)*.12+'px');b.style.setProperty('--y',(e.clientY-r.top-r.height/2)*.22+'px')});b.addEventListener('pointerleave',()=>{b.style.setProperty('--x','0px');b.style.setProperty('--y','0px')})});
+// aberto agora
+(function(){const o=document.getElementById('open');const n=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Bahia'})),d=n.getDay(),m=n.getHours()*60+n.getMinutes();const on=d>=1&&d<=5&&m>=480&&m<1080;o.textContent=on?'Aberto agora':'Fechado agora';o.classList.toggle('yes',on)})();
+
+/* =====================================================================
+   CATI · assistente virtual (sem custo, roda no navegador)
+   - entende erros de digitação e acentos (distância de edição)
+   - pontua intenções por palavras-chave e sinônimos
+   - lembra o assunto da conversa (ex.: "e quanto custa?")
+   - triagem guiada: idade + preocupações -> indica especialidades
+   - responde só sobre a Cativar e leva ao WhatsApp com a mensagem pronta
+   ===================================================================== */
+(function(){
+const $=s=>document.getElementById(s);
+const box=$('ai'),btn=$('aiBtn'),B=$('aiB'),S=$('aiS'),F=$('aiF'),I=$('aiI'),tease=$('tease');
+const norm=t=>t.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9\s]/g,' ').replace(/\s+/g,' ').trim();
+function lev(a,b){if(Math.abs(a.length-b.length)>2)return 9;const d=[];for(let i=0;i<=a.length;i++){d[i]=[i]}for(let j=1;j<=b.length;j++)d[0][j]=j;for(let i=1;i<=a.length;i++)for(let j=1;j<=b.length;j++)d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return d[a.length][b.length]}
+function has(text,toks,key){key=norm(key);if(key.includes(' '))return text.includes(key);if(text.includes(key)&&key.length>=4)return true;return toks.some(t=>t===key||(key.length>=5&&t.length>=4&&(t.startsWith(key.slice(0,5))||lev(t,key)<=(key.length>=8?2:1))))}
+const WAL=(m,label)=>'<br><a class="wa-cta" href="'+wa(m)+'" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>'+(label||'Continuar no WhatsApp')+'</a>';
+const ESP={
+ odonto:{n:'Odontologia',k:['dentista','odonto','odontologia','dente','dentes','implante','protese','aparelho','ortodont','clareamento','canal','carie','odontopediatria','limpeza'],a:'Na <b>Odontologia</b> a Cativar atende <b>crianças</b> (com adaptação e paciência) e <b>adultos</b>, com acompanhamento completo:<ul><li>Implantes e próteses dentárias</li><li>Aparelhos ortodônticos</li><li>Clareamento dental</li></ul>'},
+ comport:{n:'Psicologia comportamental',k:['comportamental','comportamento','birra','crise','agressiv','iniciativa','dominó','domino','regras'],a:'A <b>Psicologia comportamental</b> trabalha o comportamento no dia a dia e os <b>treinamentos de iniciativa comportamental</b>, inclusive em situações reais como ir ao supermercado.'},
+ aba:{n:'Terapia ABA',k:['aba','denver','intervencao precoce','precoce','estruturado','habilidades'],a:'A <b>Terapia ABA</b> é o ensino estruturado de habilidades, com metas individualizadas e evolução registrada. Para os pequenos, há <b>intervenção precoce com o modelo Denver</b>.'},
+ emocional:{n:'Acompanhamento emocional',k:['emocional','emocoes','ansiedade','ansioso','tristeza','depress','terapia para mim','psicoterapia','conversar','escuta','online','on line'],a:'O <b>acompanhamento emocional</b> é um espaço de escuta e cuidado para crianças, adolescentes e adultos, <b>presencial ou on-line</b>.'},
+ pais:{n:'Acompanhamento para pais',k:['pais','mae','pai','para mim como mae','cuidador','familia','orientacao parental'],a:'Existe o <b>Acompanhamento psicológico especializado para pais</b>: um espaço de escuta e acolhimento exclusivo para quem cuida, com <b>condições especiais</b> de atendimento.'},
+ psico:{n:'Psicologia',k:['psicologo','psicologa','psicologia','psicoterapeuta'],a:'A <b>Psicologia</b> da Cativar tem três frentes: <b>comportamental</b>, <b>Terapia ABA</b> e <b>acompanhamento emocional</b>, além do acompanhamento para os pais. Quer saber mais de alguma?',chips:['Terapia ABA','Psicologia comportamental','Acompanhamento emocional','Apoio para pais']},
+ psicomot:{n:'Psicomotricidade',k:['psicomotricidade','psicomotor','coordenacao','equilibrio','motora fina','desastrado'],a:'A <b>Psicomotricidade</b> integra corpo, movimento e emoção: coordenação, equilíbrio, espera, troca de turno e interação com o outro, tudo brincando.'},
+ fisio:{n:'Fisioterapia',k:['fisio','fisioterapia','fisioterapeuta','postura','andar','engatinhar','marcha','tonus','motor'],a:'A <b>Fisioterapia infantil e do adolescente</b> cuida do desenvolvimento motor, da postura e da força, com um plano para cada fase.'},
+ nutri:{n:'Nutrição',k:['nutri','nutricao','nutricionista','comer','come','alimentacao','alimentar','seletividade','seletivo','dieta','peso','fruta','verdura'],a:'A <b>Nutrição</b> oferece atendimento nutricional e <b>terapia nutricional</b>, com atenção especial à <b>seletividade alimentar</b>: os alimentos são apresentados passo a passo, no tempo da criança.'},
+ psicoped:{n:'Psicopedagogia',k:['psicopedagogia','psicopedagoga','escola','aprendizagem','aprender','ler','leitura','escrever','escrita','nota','dislexia','matematica','dever'],a:'A <b>Psicopedagogia clínica</b> avalia e trabalha dificuldades de aprendizagem, leitura, escrita, atenção e raciocínio, em parceria com a família e a escola.'},
+ musico:{n:'Musicoterapia',k:['musica','musicoterapia','musical','cantar','ritmo'],a:'A <b>Musicoterapia</b> usa a música como ponte para comunicação, atenção compartilhada, regulação emocional e interação.'},
+ medico:{n:'Atendimento médico',k:['medico','medica','neuro','neurologista','neurologia','psiquiatra','psiquiatria','laudo','diagnostico','remedio','medicacao','sono','dormir'],a:'No <b>atendimento médico</b> há <b>Neurologia</b>, <b>Psiquiatria</b> e <b>acompanhamento psiquiátrico</b>: avaliação, diagnóstico e acompanhamento do neurodesenvolvimento (TEA, TDAH, humor, sono e ansiedade), integrados às terapias.'},
+ fono:{n:'Fonoaudiologia',k:['fono','fonoaudiologia','fonoaudiologa','fala','falar','nao fala','palavra','gagueira','troca letra','linguagem','comunicacao','mastigar'],a:'A <b>Fonoaudiologia</b> trabalha linguagem, fala, comunicação (inclusive comunicação alternativa) e alimentação, sempre de forma lúdica.'},
+ to:{n:'Terapia Ocupacional com Integração Sensorial',k:['terapia ocupacional','to','ocupacional','integracao sensorial','sensorial','barulho','textura','balanco','autonomia','vestir','avd','avds','seletividade sensorial'],a:'A <b>Terapia Ocupacional com Integração Sensorial</b> ajuda a criança a organizar o que sente (sons, toque, movimento) para se regular e ganhar autonomia nas atividades do dia a dia, como vestir-se e alimentar-se.'}
+};
+const INT=[
+ {id:'oi',k:['oi','ola','bom dia','boa tarde','boa noite','eae','e ai','opa','hello'],r:()=>'Olá! 😊 Que bom te ver por aqui. Posso falar sobre as <b>especialidades</b>, as <b>vivências</b>, <b>endereço e horário</b>, ou te ajudar a descobrir <b>qual terapia</b> é indicada. Por onde começamos?',chips:['Qual terapia meu filho precisa?','Quais especialidades?','Onde fica?','Agendar avaliação']},
+ {id:'agendar',k:['agendar','marcar','agenda','consulta','avaliacao','vaga','vagas','horario disponivel','atendimento','quero atendimento','comecar'],r:c=>'Para <b>agendar</b>, a equipe atende pelo WhatsApp (75) 98705-8503 e organiza a avaliação inicial'+(c.topic?' de <b>'+c.topic+'</b>':'')+'.'+WAL('Olá! Vim pelo site da Cativar e gostaria de agendar uma avaliação'+(c.topic?' de '+c.topic:'')+'.','Agendar no WhatsApp')},
+ {id:'valor',k:['valor','valores','preco','precos','quanto custa','custa','custo','pagamento','pagar','parcel','desconto','caro'],r:c=>'Os <b>valores</b> dependem do tipo de atendimento e do plano terapêutico, então a equipe informa direitinho pelo WhatsApp'+(c.topic?' (posso já mandar sua pergunta sobre <b>'+c.topic+'</b>)':'')+'. Para os pais, existe acompanhamento psicológico com <b>condições especiais</b>.'+WAL('Olá! Gostaria de saber os valores'+(c.topic?' de '+c.topic:'')+' na Cativar.','Perguntar valores')},
+ {id:'convenio',k:['convenio','convenios','plano de saude','plano','unimed','hapvida','reembolso','sus'],r:()=>'Sobre <b>convênios e planos de saúde</b>, a equipe confirma pelo WhatsApp quais são aceitos no momento.'+WAL('Olá! A Cativar atende pelo meu plano de saúde? Meu plano é: ','Perguntar sobre convênio')},
+ {id:'local',k:['onde','endereco','fica','localizacao','local','rua','bairro','chegar','mapa','como chego'],r:()=>'📍 <b>Rua Alagoas, 5 · Panorama, Paulo Afonso - BA</b> (CEP 48605-036).<br><a class="go" href="https://www.google.com/maps/dir/?api=1&destination=Cativar+Multidisciplinar,+Rua+Alagoas,+5,+Panorama,+Paulo+Afonso+-+BA" target="_blank" rel="noopener">Abrir rota no Google Maps →</a>'},
+ {id:'horario',k:['horario','hora','abre','fecha','funciona','funcionamento','sabado','domingo','feriado','aberto'],r:()=>{const n=new Date(new Date().toLocaleString('en-US',{timeZone:'America/Bahia'})),d=n.getDay(),m=n.getHours()*60+n.getMinutes(),on=d>=1&&d<=5&&m>=480&&m<1080;return'🕗 <b>Segunda a sexta, das 08h às 18h.</b> Agora a clínica está <b>'+(on?'aberta':'fechada')+'</b>'+(on?'.':', mas você pode deixar sua mensagem no WhatsApp.')}},
+ {id:'contato',k:['telefone','whatsapp','zap','numero','contato','ligar','email','instagram','insta'],r:()=>'📱 WhatsApp e telefone: <b>(75) 98705-8503</b><br>✉️ cativarclinicamultidisciplinar@gmail.com<br>📷 @cativar_multidisciplinar_'+WAL('Olá! Vim pelo site da Cativar.','Abrir WhatsApp')},
+ {id:'lista',k:['especialidades','especialidade','servicos','servico','o que voces fazem','quais terapias','terapias','atendem o que','areas'],r:()=>'Na Cativar você encontra, num só lugar:<ul><li>Psicologia (comportamental, ABA e emocional)</li><li>Fonoaudiologia</li><li>Terapia Ocupacional com Integração Sensorial</li><li>Psicomotricidade · Fisioterapia</li><li>Nutrição · Psicopedagogia · Musicoterapia</li><li>Odontologia · Neurologia · Psiquiatria</li></ul>Sobre qual quer saber mais?',chips:['Terapia ABA','Fonoaudiologia','Integração Sensorial','Odontologia']},
+ {id:'tea',k:['autismo','autista','tea','espectro','neurodivergente'],r:()=>'A Cativar é especializada em <b>autismo (TEA)</b>: Terapia ABA, Denver, fonoaudiologia, T.O. com Integração Sensorial, psicomotricidade, nutrição para seletividade e acompanhamento médico, tudo integrado e com <b>reuniões multidisciplinares</b> da equipe.',chips:['Terapia ABA','O que são as vivências?','Agendar avaliação']},
+ {id:'tdah',k:['tdah','hiperativ','deficit de atencao','desatento','agitado','nao para quieto','atencao'],r:()=>'Para <b>TDAH</b>, a Cativar une avaliação e acompanhamento médico (neurologia/psiquiatria), psicologia comportamental e psicopedagogia, com orientação para a família e a escola.'},
+ {id:'idade',k:['adulto','adultos','idade','bebe','crianca pequena','adolescente','adolescentes','teen','quantos anos','faixa etaria'],r:()=>'A Cativar atende <b>infância, adolescência e adultos</b>. Para os pequenos há intervenção precoce; para adolescentes, o <b>Grupo TIM</b>; e para adultos, acompanhamento psicológico presencial ou on-line.'},
+ {id:'vivencias',k:['vivencia','vivencias','diferencial','diferenciais','supermercado','mercado','livraria','biblioteca','generalizacao','generalizar','passeio','vida real'],r:()=>'O <b>principal diferencial</b> da Cativar são as <b>vivências e a generalização de comportamentos</b>: o que a criança aprende em sessão é treinado no <b>supermercado</b> (com mapeamento para rastreio visual e plano de modelagem), na <b>livraria</b> e na <b>biblioteca municipal</b>.<br><a class="go" href="#vivencias">Ver o mapa das vivências →</a>'},
+ {id:'tim',k:['tim','grupo tim','habilidades sociais','ths','grupo teen','amigos','socializar','timido','timidez'],r:()=>'O <b>Grupo TIM</b> é o Treinamento de Habilidades Sociais para <b>adolescentes</b>: vivências em ambientes externos e naturalizados, próximas da rotina deles, para que os comportamentos aprendidos se generalizem para o dia a dia.'+WAL('Olá! Gostaria de saber sobre o Grupo TIM para adolescentes.','Perguntar sobre o Grupo TIM')},
+ {id:'reuniao',k:['reuniao','reunioes','equipe conversa','integrado','multidisciplinar','junto'],r:()=>'A equipe faz <b>reuniões multidisciplinares periódicas</b> para alinhamento terapêutico, discussão de casos, acompanhamento da evolução e revisão conjunta das estratégias. Cada paciente é visto por inteiro.'},
+ {id:'triagem',k:['qual terapia','nao sei','nao sei qual','indicada','indicacao','me ajuda','ajuda a escolher','por onde comecar','preciso de ajuda','o que fazer','meu filho','minha filha'],r:()=>startTriage()},
+ {id:'obg',k:['obrigado','obrigada','valeu','agradeco','show','top','perfeito','otimo'],r:()=>'Imagina! 💚 Se precisar, é só chamar. A equipe também está no WhatsApp.',chips:['Agendar avaliação','Onde fica?']},
+ {id:'tchau',k:['tchau','ate mais','ate logo','falou','bye'],r:()=>'Até logo! Foi um prazer ajudar. 🌿'}
+];
+const CONCERN=[['fala','não fala ou fala pouco',['fono','aba']],['comportamento','crises, birras ou comportamento difícil',['comport','aba','medico']],['sensorial','incômodo com barulho, toque ou texturas',['to']],['alimentacao','come poucos alimentos',['nutri','fono']],['escola','dificuldade na escola',['psicoped','medico']],['motor','coordenação ou desenvolvimento motor',['psicomot','fisio','to']],['social','dificuldade para fazer amigos',['tim','aba']],['emocional','ansiedade ou emoções',['emocional','medico']]];
+let ctx={topic:null,last:null,triage:null};
+let hist=[];try{hist=JSON.parse(sessionStorage.getItem('cati')||'[]')}catch(e){}
+const save=()=>{try{sessionStorage.setItem('cati',JSON.stringify(hist.slice(-40)))}catch(e){}};
+const av='<span class="mini"><svg><use href="#i-bot"/></svg></span>';
+function addMsg(html,who,store=true){const d=document.createElement('div');d.className='msg '+who;d.innerHTML=who==='bot'?av+'<div class="bb">'+html+'</div>':html;B.appendChild(d);B.scrollTop=B.scrollHeight;if(store){hist.push([who,html]);save()}
+  d.querySelectorAll('a.go[href^="#"]').forEach(a=>a.addEventListener('click',()=>{if(innerWidth<700)close()}))}
+function chips(arr){S.innerHTML='';(arr||['Qual terapia meu filho precisa?','Quais especialidades?','Valores e convênios','Onde fica?']).forEach(t=>{const b=document.createElement('button');b.type='button';b.textContent=t;b.onclick=()=>send(t);S.appendChild(b)})}
+function typing(){const d=document.createElement('div');d.className='msg bot typing';d.innerHTML=av+'<div class="bb"><i></i><i></i><i></i></div>';B.appendChild(d);B.scrollTop=B.scrollHeight;return d}
+function startTriage(){ctx.triage={step:1};return['Vou te ajudar a encontrar o caminho certo. 🌱 Primeiro: <b>quem vai ser atendido?</b>',['Criança até 6 anos','Criança de 7 a 12','Adolescente','Adulto']]}
+function triage(t){const T=ctx.triage;
+  if(T.step===1){T.age=t;T.step=2;T.sel=[];return['Entendi: <b>'+t+'</b>. Agora, <b>o que mais te preocupa?</b> Pode tocar em mais de uma opção e depois em “Pronto”.',[...CONCERN.map(c=>c[1]),'✓ Pronto']]}
+  if(T.step===2){const n=norm(t);if(n.startsWith('pronto')||n==='pronto'||n.includes('so isso')){if(!T.sel.length)return['Escolha ao menos uma opção, ou descreva com suas palavras. 🙂',[...CONCERN.map(c=>c[1]),'✓ Pronto']];return finishTriage()}
+    const c=CONCERN.find(c=>norm(c[1])===n)||CONCERN.find(c=>n.includes(c[0]));if(c){if(!T.sel.includes(c))T.sel.push(c);return['Anotado: <b>'+c[1]+'</b>. Mais alguma coisa?',[...CONCERN.filter(x=>!T.sel.includes(x)).map(x=>x[1]),'✓ Pronto']]}
+    const found=detectEsp(t);if(found.length){T.free=(T.free||[]).concat(found);T.sel.push(['livre',t,found]);return finishTriage()}
+    return['Não entendi bem. Escolha uma das opções abaixo ou toque em “Pronto”.',[...CONCERN.map(c=>c[1]),'✓ Pronto']]}}
+function finishTriage(){const T=ctx.triage;const score={};T.sel.forEach(c=>c[2].forEach((e,i)=>score[e]=(score[e]||0)+3-i));
+  if(/6/.test(T.age)){score.aba=(score.aba||0)+1}
+  if(/Adolesc/.test(T.age)){score.tim=(score.tim||0)+1}
+  if(/Adulto/.test(T.age)){delete score.tim;delete score.psicomot;score.emocional=(score.emocional||0)+2}
+  const top=Object.entries(score).sort((a,b)=>b[1]-a[1]).slice(0,3).map(e=>e[0]);
+  const name=k=>k==='tim'?'Grupo TIM (habilidades sociais)':ESP[k].n;
+  const list=top.map(k=>'<li><b>'+name(k)+'</b></li>').join('');
+  const msg='Olá! Vim pelo site da Cativar. Atendimento para: '+T.age+'. Principais preocupações: '+T.sel.map(c=>c[1]).join('; ')+'. Gostaria de agendar uma avaliação.';
+  ctx.topic=name(top[0]);ctx.triage=null;
+  return['Obrigada por compartilhar. 💚 Pelo que você contou, estas especialidades costumam ajudar:<ul>'+list+'</ul>A <b>avaliação inicial</b> com a equipe confirma o melhor plano, e as áreas trabalham juntas. Já deixei a mensagem pronta para você:'+WAL(msg,'Enviar e agendar avaliação'),['Como funcionam as vivências?','Valores e convênios','Onde fica?']]}
+function detectEsp(t){const n=norm(t),tk=n.split(' ');const r=[];Object.entries(ESP).forEach(([id,e])=>{let s=0;e.k.forEach(k=>{if(has(n,tk,k))s+=norm(k).length>4?2:1});if(s)r.push([id,s])});return r.sort((a,b)=>b[1]-a[1]).map(x=>x[0])}
+function answer(text){
+  if(ctx.triage)return triage(text);
+  const n=norm(text),tk=n.split(' ');
+  // concerns written freely ("meu filho não fala")
+  const free=CONCERN.filter(c=>has(n,tk,c[0])||(c[0]==='fala'&&/nao fala|fala pouco|nao conversa/.test(n)));
+  // intent scoring
+  let best=null,bs=0;INT.forEach(it=>{let s=0;it.k.forEach(k=>{if(has(n,tk,k))s+=norm(k).split(' ').length*2+(norm(k).length>5?1:0)});if(s>bs){bs=s;best=it}});
+  const esp=detectEsp(text);
+  // pergunta sobre especialidade + intenção (ex.: "quanto custa a fono", "agendar fono")
+  if(esp.length&&best&&['agendar','valor','convenio'].includes(best.id)){ctx.topic=ESP[esp[0]].n;return[best.r(ctx),best.chips]}
+  if(/meu filho|minha filha|crianca|filho/.test(n)&&/nao fala|fala pouco|crise|birra|nao come|escola|barulho/.test(n)){ctx.triage={step:2,age:'Criança',sel:[]};free.forEach(c=>ctx.triage.sel.push(c));if(ctx.triage.sel.length)return finishTriage()}
+  if(best&&best.id==='triagem'&&!esp.length){const r=best.r(ctx);return r}
+  if(esp.length&&(!best||bs<=3||['oi'].includes(best.id))){const e=ESP[esp[0]];ctx.topic=e.n;ctx.last=esp[0];return[e.a+WAL('Olá! Gostaria de saber mais sobre '+e.n+' na Cativar.','Falar sobre '+e.n),e.chips||['Valores','Agendar avaliação','Quais especialidades?']]}
+  if(best&&bs>0){if(best.id!=='oi'&&best.id!=='obg')ctx.last=best.id;const r=best.r(ctx);return Array.isArray(r)?r:[r,best.chips]}
+  // follow-ups curtos ("e para adultos?", "e o horário?")
+  if(ctx.topic&&/^(e |e o |e a |tambem|isso|quanto|como)/.test(n))return['Sobre <b>'+ctx.topic+'</b>, os detalhes específicos a equipe confirma rapidinho pelo WhatsApp.'+WAL('Olá! Tenho uma dúvida sobre '+ctx.topic+': '+text,'Enviar minha dúvida')];
+  // fora do escopo
+  return['Eu sou a assistente da <b>Cativar</b> e respondo sobre os atendimentos, as vivências, valores, endereço e horários. 🙂 Essa pergunta a equipe responde melhor:'+WAL('Olá! Vim pelo site da Cativar e tenho uma dúvida: '+text,'Enviar para a equipe'),['Quais especialidades?','Qual terapia meu filho precisa?','Onde fica?']]}
+let busy=false;
+function send(text){text=(text||'').trim();if(!text||busy)return;addMsg(text.replace(/</g,'&lt;'),'user');S.innerHTML='';busy=true;
+  const [html,ch]=(()=>{const r=answer(text);return Array.isArray(r)?r:[r]})();
+  const t=typing();const delay=reduce?150:Math.min(1600,450+html.replace(/<[^>]+>/g,'').length*6);
+  setTimeout(()=>{t.remove();addMsg(html,'bot');chips(ch);busy=false},delay)}
+function open(){box.hidden=false;btn.setAttribute('aria-expanded','true');tease.hidden=true;
+  if(!B.children.length){if(hist.length){hist.forEach(h=>addMsg(h[1],h[0],false));chips()}else{addMsg('Oi! Eu sou a <b>Cati</b>, assistente virtual da <b>Cativar Multidisciplinar</b>. 🌿<br>Posso te explicar cada especialidade, falar das nossas vivências, endereço e horários, ou te ajudar a descobrir <b>qual terapia é indicada</b>. Como posso ajudar?','bot');chips()}}
+  setTimeout(()=>{if(fine)I.focus()},300)}
+function close(){box.hidden=true;btn.setAttribute('aria-expanded','false')}
+btn.onclick=()=>box.hidden?open():close();$('aiX').onclick=close;
+$('aiReset').onclick=()=>{hist=[];save();ctx={topic:null,last:null,triage:null};B.innerHTML='';open()};
+F.onsubmit=e=>{e.preventDefault();send(I.value);I.value=''};
+addEventListener('keydown',e=>{if(e.key==='Escape'&&!box.hidden)close()});
+$('heroAsk').onclick=()=>{open();setTimeout(()=>send('Qual terapia meu filho precisa?'),350)};
+$('faqAsk').onclick=open;
+tease.onclick=e=>{if(e.target.id==='teaseX'){tease.hidden=true;try{sessionStorage.setItem('catiT','1')}catch(_){}return}open();setTimeout(()=>send('Qual terapia meu filho precisa?'),350)};
+let seen=false;try{seen=sessionStorage.getItem('catiT')}catch(e){}
+if(!seen)setTimeout(()=>{if(box.hidden){tease.hidden=false;setTimeout(()=>tease.hidden=true,12000)}},9000);
+})();
+</script>
+</body>
+</html>
